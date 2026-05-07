@@ -6,11 +6,7 @@
 <title>Qazaq Indie Records</title>
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Dela+Gothic+One&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 <style>
-/* ══════════════════════════════════════════
-   QAZAQ INDIE RECORDS — TILDA READY HTML
-   Вставить в Tilda: Zero Block → HTML
-   или как самостоятельную страницу
-   ══════════════════════════════════════════ */
+
 
 *{margin:0;padding:0;box-sizing:border-box}
 
@@ -31,13 +27,12 @@ body{
   font-family: 'Courier Prime', monospace;
   min-height: 100vh;
   overflow-x: hidden;
-  /* бумажная текстура */
+ 
   background-image:
     repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,.03) 28px),
     repeating-linear-gradient(90deg, transparent, transparent 120px, rgba(0,0,0,.015) 121px);
 }
 
-/* ── НАВИГАЦИЯ ── */
 nav{
   border-bottom: 3px solid var(--ink);
   padding: 0 1.2rem;
@@ -123,14 +118,12 @@ nav{
 .lb:hover{border-color: var(--ink); color: var(--ink)}
 .lb.active{background: var(--ink); color: var(--cream); border-color: var(--ink)}
 
-/* ── СТРАНИЦЫ ── */
+
 .page{display: none}
 .page.active{display: block; animation: fade .25s ease}
 @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
 
-/* ══════════════════════
-   HOME
-══════════════════════ */
+
 .home-top{
   display: grid;
   grid-template-columns: 5fr 3fr;
@@ -348,9 +341,7 @@ nav{
 .fss-name{font-family: 'Dela Gothic One', sans-serif; font-size: .85rem; line-height: 1.2; margin-bottom: .2rem}
 .fss-genre{font-size: .58rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted)}
 
-/* ══════════════════════
-   ARTISTS
-══════════════════════ */
+
 .pg-header{
   padding: 1.5rem 2rem;
   border-bottom: 2px solid var(--ink);
