@@ -1,0 +1,329 @@
+{
+  "label": {
+    "name": "QAZAQ INDIE",
+    "tagline": {
+      "kz": "тәуелсіз лейбл · алматы · 2019-дан",
+      "en": "independent label · almaty · since 2019",
+      "ru": "независимый лейбл · алматы · с 2019"
+    },
+    "hero": {
+      "kz": ["ДАЛАДАН", "ШЫҚҚАН", "ДЫБЫС"],
+      "en": ["SOUND", "FROM THE", "STEPPE"],
+      "ru": ["ЗВУК", "ИЗ", "СТЕПИ"]
+    },
+    "description": {
+      "kz": "Өздерінше дыбысталатындарға арналған инди-лейбл. Қазақстан және одан тыс.",
+      "en": "An indie label for those who sound like themselves. Kazakhstan and beyond.",
+      "ru": "Инди-лейбл для тех, кто звучит по-своему. Казахстан и то, что за ним."
+    },
+    "stats": {
+      "artists": 7,
+      "releases": 31,
+      "founded": 2019
+    },
+    "about": {
+      "kz": "Qazaq Indie Records 2019 жылы Алматыда пайда болды. Бізде жанр жоқ — бізде кеңістік бар. Басқа жерге сыймағандарға арналған. Қазақстан, Орталық Азия, бүкіл әлем — осы ретпен.",
+      "en": "Qazaq Indie Records appeared in Almaty in 2019. We are not a genre label. We are a space for artists who didn't fit anywhere else. Kazakhstan, Central Asia, the whole world — in that order.",
+      "ru": "Qazaq Indie Records появился в Алматы в 2019 году. Мы не жанровый лейбл. Мы — пространство для артистов, которым было тесно в других рамках."
+    },
+    "manifesto": {
+      "kz": "Даладан дүние тыңдамаған дыбыстар шығады. Біздің міндет — кедергі жасамау.",
+      "en": "The steppe holds sounds the world hasn't heard yet. Our job is to get out of the way.",
+      "ru": "У степи есть звуки, которые мир ещё не слышал. Наша задача — не мешать им выйти."
+    },
+    "contacts": {
+      "booking": "booking@qazaqindie.kz",
+      "demos": "demos@qazaqindie.kz",
+      "press": "press@qazaqindie.kz",
+      "general": "info@qazaqindie.kz",
+      "instagram": "https://instagram.com/qazaqindie",
+      "city": {
+        "kz": "Алматы, Қазақстан",
+        "en": "Almaty, Kazakhstan",
+        "ru": "Алматы, Казахстан"
+      }
+    }
+  },
+
+  "artists": [
+    {
+      "id": "aida",
+      "color": "#1a3a2a",
+      "accent": "#4ade80",
+      "initials": "AK",
+      "photo": "",
+      "kz": {
+        "name": "Аида Қарымова",
+        "genre": "Электроника / Эмбиент",
+        "bio": "Аида қазақтың халық мотивтерін электрондық текстураларға ендіреді. Домбыра оқыған, содан кейін синтезді тапты.",
+        "country": "Қазақстан"
+      },
+      "en": {
+        "name": "Aida Karimova",
+        "genre": "Electronic / Ambient",
+        "bio": "Aida crafts soundscapes weaving Kazakh folk motifs into deep electronic textures. Studied traditional dombra, then found synthesis.",
+        "country": "Kazakhstan"
+      },
+      "ru": {
+        "name": "Аида Каримова",
+        "genre": "Электроника / Эмбиент",
+        "bio": "Аида создаёт пейзажи, вплетая казахские мотивы в электронные текстуры. Изучала домбру, нашла синтез.",
+        "country": "Казахстан"
+      },
+      "since": 2020,
+      "links": {
+        "spotify": "",
+        "instagram": "",
+        "youtube": ""
+      },
+      "releases": [
+        { "kz": "Таң атқан дала", "en": "Steppes at Dawn", "ru": "Рассвет над степью", "year": 2023, "type": "album" },
+        { "kz": "Тәңір EP", "en": "Tengri EP", "ru": "Тенгри EP", "year": 2022, "type": "ep" },
+        { "kz": "Тұзды көл", "en": "Salt Lake Sessions", "ru": "Сессии Солёного озера", "year": 2021, "type": "album" }
+      ]
+    },
+    {
+      "id": "zarina",
+      "color": "#1a1a2e",
+      "accent": "#a78bfa",
+      "initials": "ZN",
+      "photo": "",
+      "kz": {
+        "name": "Зарина Нұрланова",
+        "genre": "Инди-поп / Фолк",
+        "bio": "Зарина үш тілде — қазақша, орысша, ағылшынша — ән жазады. Дебюттік альбомы жылдың үздіктер тізіміне кірді.",
+        "country": "Қазақстан"
+      },
+      "en": {
+        "name": "Zarina Nurlanovna",
+        "genre": "Indie Pop / Folk",
+        "bio": "Zarina writes in three languages — Kazakh, Russian, English — stitching them together effortlessly. Her debut made numerous year-end lists.",
+        "country": "Kazakhstan"
+      },
+      "ru": {
+        "name": "Зарина Нурланова",
+        "genre": "Инди-поп / Фолк",
+        "bio": "Зарина пишет на трёх языках — казахском, русском, английском. Дебютный альбом в списках лучших года.",
+        "country": "Казахстан"
+      },
+      "since": 2022,
+      "links": {
+        "spotify": "",
+        "instagram": "",
+        "youtube": ""
+      },
+      "releases": [
+        { "kz": "Үш тіл", "en": "Three Tongues", "ru": "Три языка", "year": 2024, "type": "album" },
+        { "kz": "Алаша", "en": "Alasha", "ru": "Алаша", "year": 2023, "type": "single" },
+        { "kz": "Бірінші жарық", "en": "First Light", "ru": "Первый свет", "year": 2022, "type": "album" }
+      ]
+    },
+    {
+      "id": "yerlan",
+      "color": "#2a1a0e",
+      "accent": "#fb923c",
+      "initials": "YD",
+      "photo": "",
+      "kz": {
+        "name": "Ерлан Жақсыбеков",
+        "genre": "Хип-хоп / Рэп",
+        "bio": "Ерлан қазақтың ақындық дәстүрін қазіргі трэппен ұштастырады. Қала көшелеріне арналған.",
+        "country": "Қазақстан"
+      },
+      "en": {
+        "name": "Yerlan Dzhaksybekov",
+        "genre": "Hip-Hop / Rap",
+        "bio": "Yerlan blends Kazakh lyrical tradition with contemporary trap. Image-rich verses drawn from the oral poetry of the akyn, for city streets.",
+        "country": "Kazakhstan"
+      },
+      "ru": {
+        "name": "Ерлан Джаксыбеков",
+        "genre": "Хип-хоп / Рэп",
+        "bio": "Ерлан смешивает казахскую лирическую традицию с трэпом. Тексты из устной поэзии акынов — для городских улиц.",
+        "country": "Казахстан"
+      },
+      "since": 2021,
+      "links": {
+        "spotify": "",
+        "instagram": "",
+        "youtube": ""
+      },
+      "releases": [
+        { "kz": "Бетон Көшпенді", "en": "Concrete Nomad", "ru": "Бетон Кочевник", "year": 2024, "type": "album" },
+        { "kz": "Қарғы EP", "en": "Karghy EP", "ru": "Каргы EP", "year": 2023, "type": "ep" },
+        { "kz": "Құрылтай", "en": "Kurultai", "ru": "Курылтай", "year": 2022, "type": "album" }
+      ]
+    },
+    {
+      "id": "marat",
+      "color": "#1a1a1a",
+      "accent": "#94a3b8",
+      "initials": "MB",
+      "photo": "",
+      "kz": {
+        "name": "Марат Бектуров",
+        "genre": "Эксперименталды / Дрон",
+        "bio": "Марат Қазақстан даласы мен Арал теңізі өңірінен жазылған дыбыстардан дрон-композициялар жасайды.",
+        "country": "Қазақстан"
+      },
+      "en": {
+        "name": "Marat Bekturov",
+        "genre": "Experimental / Drone",
+        "bio": "Marat builds long-form drone compositions from field recordings across the Kazakh steppe and Aral Sea region.",
+        "country": "Kazakhstan"
+      },
+      "ru": {
+        "name": "Марат Бектуров",
+        "genre": "Эксперименталь / Дрон",
+        "bio": "Марат создаёт дрон-композиции из полевых записей степи и Аральского моря.",
+        "country": "Казахстан"
+      },
+      "since": 2019,
+      "links": {
+        "spotify": "",
+        "instagram": "",
+        "youtube": ""
+      },
+      "releases": [
+        { "kz": "Арал Мемориа", "en": "Aral Memoria", "ru": "Арал Мемориа", "year": 2023, "type": "album" },
+        { "kz": "Жазық жазбалар", "en": "Flatland Tapes", "ru": "Записки равнины", "year": 2022, "type": "album" }
+      ]
+    },
+    {
+      "id": "dana",
+      "color": "#1f1a2e",
+      "accent": "#f472b6",
+      "initials": "DA",
+      "photo": "",
+      "kz": {
+        "name": "Дана Ахметова",
+        "genre": "Р&Б / Соул",
+        "bio": "Дананың дауысы — бетонға созылған жібек: жылы, тереңмәнді, Орталық Азия меланхолиясымен.",
+        "country": "Қазақстан"
+      },
+      "en": {
+        "name": "Dana Akhmetova",
+        "genre": "R&B / Soul",
+        "bio": "Dana's voice: silk stretched over concrete — warm and textured, with a Central Asian melancholy underneath.",
+        "country": "Kazakhstan"
+      },
+      "ru": {
+        "name": "Дана Ахметова",
+        "genre": "Р&Б / Соул",
+        "bio": "Голос Даны — шёлк на бетоне. Тёплый, фактурный, с казахстанской меланхолией внутри.",
+        "country": "Казахстан"
+      },
+      "since": 2022,
+      "links": {
+        "spotify": "",
+        "instagram": "",
+        "youtube": ""
+      },
+      "releases": [
+        { "kz": "Түнгі базар", "en": "Midnight Bazaar", "ru": "Полночный базар", "year": 2024, "type": "album" },
+        { "kz": "Бал мен тұз", "en": "Honey & Salt", "ru": "Мёд и соль", "year": 2023, "type": "album" },
+        { "kz": "Warm EP", "en": "Warm EP", "ru": "Warm EP", "year": 2022, "type": "ep" }
+      ]
+    },
+    {
+      "id": "ruslan",
+      "color": "#1a0a0a",
+      "accent": "#ef4444",
+      "initials": "RO",
+      "photo": "",
+      "kz": {
+        "name": "Руслан Оспанов",
+        "genre": "Техно / Индастриал",
+        "bio": "Руслан текноны азайту философиясымен жасайды — әр трек маңызды жиіліктерге дейін тазартылған.",
+        "country": "Қазақстан"
+      },
+      "en": {
+        "name": "Ruslan Ospanov",
+        "genre": "Techno / Industrial",
+        "bio": "Ruslan's hypnotic techno is built on reduction — every track stripped to essential frequencies. Almaty club fixture.",
+        "country": "Kazakhstan"
+      },
+      "ru": {
+        "name": "Руслан Оспанов",
+        "genre": "Техно / Индастриал",
+        "bio": "Техно Руслана — философия сокращения: трек до базовых частот. Основа клубной сцены Алматы.",
+        "country": "Казахстан"
+      },
+      "since": 2020,
+      "links": {
+        "spotify": "",
+        "instagram": "",
+        "youtube": ""
+      },
+      "releases": [
+        { "kz": "Темір ендіктер", "en": "Iron Latitudes", "ru": "Железные широты", "year": 2024, "type": "album" },
+        { "kz": "Қызылорда Даб", "en": "Kyzylorda Dub", "ru": "Кызылорда Даб", "year": 2023, "type": "ep" }
+      ]
+    },
+    {
+      "id": "symbat",
+      "color": "#0e1a1a",
+      "accent": "#22d3ee",
+      "initials": "SY",
+      "photo": "",
+      "kz": {
+        "name": "Символат",
+        "genre": "Авангард / Классика",
+        "bio": "Заманауи классика мен авангард арасында — Символат үнсіздіктен де, дыбыстан да жасайды. Алматы консерваториясының түлегі.",
+        "country": "Қазақстан"
+      },
+      "en": {
+        "name": "Symbat",
+        "genre": "Avant-garde / Classical",
+        "bio": "Between contemporary classical and avant-garde improvisation — Symbat builds from silence as much as sound. Almaty Conservatory graduate.",
+        "country": "Kazakhstan"
+      },
+      "ru": {
+        "name": "Символат",
+        "genre": "Авангард / Классика",
+        "bio": "Между современной классикой и авангардом — Символат строит из тишины не меньше, чем из звука. Выпускница Алматинской консерватории.",
+        "country": "Казахстан"
+      },
+      "since": 2023,
+      "links": {
+        "spotify": "",
+        "instagram": "",
+        "youtube": ""
+      },
+      "releases": [
+        { "kz": "Интерстициал", "en": "Interstitial", "ru": "Интерстициал", "year": 2024, "type": "album" },
+        { "kz": "Қозғалмас формалар", "en": "Still Forms", "ru": "Неподвижные формы", "year": 2023, "type": "ep" }
+      ]
+    }
+  ],
+
+  "events": [
+    {
+      "day": 14,
+      "month": { "kz": "МАУ", "en": "JUN", "ru": "ИЮН" },
+      "kz": { "name": "Алматы Шоукейс", "venue": "Tochka Bar, Алматы" },
+      "en": { "name": "Almaty Showcase", "venue": "Tochka Bar, Almaty" },
+      "ru": { "name": "Алматы Шоукейс", "venue": "Tochka Bar, Алматы" },
+      "status": "tickets",
+      "link": ""
+    },
+    {
+      "day": 22,
+      "month": { "kz": "МАУ", "en": "JUN", "ru": "ИЮН" },
+      "kz": { "name": "Зарина Нұрланова — тікелей", "venue": "ЦДОС, Алматы" },
+      "en": { "name": "Zarina Nurlanovna — Live", "venue": "CDOS, Almaty" },
+      "ru": { "name": "Зарина Нурланова — живой концерт", "venue": "ЦДОС, Алматы" },
+      "status": "few",
+      "link": ""
+    },
+    {
+      "day": 5,
+      "month": { "kz": "ШИЛ", "en": "JUL", "ru": "ИЮЛ" },
+      "kz": { "name": "Руслан Оспанов — клуб кеші", "venue": "Mekka Club, Алматы" },
+      "en": { "name": "Ruslan Ospanov — Club Night", "venue": "Mekka Club, Almaty" },
+      "ru": { "name": "Руслан Оспанов — клубная ночь", "venue": "Mekka Club, Алматы" },
+      "status": "tickets",
+      "link": ""
+    }
+  ]
+}
