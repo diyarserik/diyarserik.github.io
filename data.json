@@ -7,9 +7,21 @@
       "ru": "независимый лейбл · алматы · с 2019"
     },
     "hero": {
-      "kz": ["ДАЛАДАН", "ШЫҚҚАН", "ДЫБЫС"],
-      "en": ["SOUND", "FROM THE", "STEPPE"],
-      "ru": ["ЗВУК", "ИЗ", "СТЕПИ"]
+      "kz": [
+        "ДАЛАДАН",
+        "ШЫҚҚАН",
+        "ДЫБЫС"
+      ],
+      "en": [
+        "SOUND",
+        "FROM THE",
+        "STEPPE"
+      ],
+      "ru": [
+        "ЗВУК",
+        "ИЗ",
+        "СТЕПИ"
+      ]
     },
     "description": {
       "kz": "Өздерінше дыбысталатындарға арналған инди-лейбл. Қазақстан және одан тыс.",
@@ -44,14 +56,13 @@
       }
     }
   },
-
   "artists": [
     {
       "id": "dudeontheguitar",
       "color": "#1a1a1a",
       "accent": "#ffffff",
       "initials": "NE",
-      "photo": "images/dude.jpg",
+      "photo": "",
       "kz": {
         "name": "dudeontheguitar",
         "genre": "Инди-поп / Р&Б",
@@ -77,10 +88,38 @@
         "youtube": ""
       },
       "releases": [
-        { "kz": "Дәптер", "en": "Dapter", "ru": "Дәптер", "year": 2023, "type": "album" },
-        { "kz": "kõrpe", "en": "kõrpe", "ru": "kõrpe", "year": 2021, "type": "album" },
-        { "kz": "baq (feat. Jeltoksan.)", "en": "baq (feat. Jeltoksan.)", "ru": "baq (feat. Jeltoksan.)", "year": 2022, "type": "single" },
-        { "kz": "toq (feat. Yenlik)", "en": "toq (feat. Yenlik)", "ru": "toq (feat. Yenlik)", "year": 2022, "type": "single" }
+        {
+          "kz": "Дәптер",
+          "en": "Dapter",
+          "ru": "Дәптер",
+          "year": 2023,
+          "type": "album",
+          "cover": ""
+        },
+        {
+          "kz": "kõrpe",
+          "en": "kõrpe",
+          "ru": "kõrpe",
+          "year": 2021,
+          "type": "album",
+          "cover": ""
+        },
+        {
+          "kz": "baq (feat. Jeltoksan.)",
+          "en": "baq (feat. Jeltoksan.)",
+          "ru": "baq (feat. Jeltoksan.)",
+          "year": 2022,
+          "type": "single",
+          "cover": ""
+        },
+        {
+          "kz": "toq (feat. Yenlik)",
+          "en": "toq (feat. Yenlik)",
+          "ru": "toq (feat. Yenlik)",
+          "year": 2022,
+          "type": "single",
+          "cover": ""
+        }
       ]
     },
     {
@@ -88,7 +127,7 @@
       "color": "#0f1a0f",
       "accent": "#a8d8a8",
       "initials": "SI",
-      "photo": "images/samrattama.jpeg",
+      "photo": "",
       "kz": {
         "name": "SAMRATTAMA",
         "genre": "Инди / Альтернативті хип-хоп",
@@ -114,9 +153,30 @@
         "youtube": ""
       },
       "releases": [
-        { "kz": "ХЭМИНГУЭЙ В ШТАНАХ", "en": "HEMINGWAY IN PANTS", "ru": "ХЭМИНГУЭЙ В ШТАНАХ", "year": 2020, "type": "album" },
-        { "kz": "bitpeitin bit", "en": "bitpeitin bit", "ru": "bitpeitin bit", "year": 2025, "type": "single" },
-        { "kz": "gospozha pensia", "en": "gospozha pensia", "ru": "gospozha pensia", "year": 2025, "type": "single" }
+        {
+          "kz": "ХЭМИНГУЭЙ В ШТАНАХ",
+          "en": "HEMINGWAY IN PANTS",
+          "ru": "ХЭМИНГУЭЙ В ШТАНАХ",
+          "year": 2020,
+          "type": "album",
+          "cover": ""
+        },
+        {
+          "kz": "bitpeitin bit",
+          "en": "bitpeitin bit",
+          "ru": "bitpeitin bit",
+          "year": 2025,
+          "type": "single",
+          "cover": ""
+        },
+        {
+          "kz": "gospozha pensia",
+          "en": "gospozha pensia",
+          "ru": "gospozha pensia",
+          "year": 2025,
+          "type": "single",
+          "cover": ""
+        }
       ]
     },
     {
@@ -150,11 +210,46 @@
         "youtube": ""
       },
       "releases": [
-        { "kz": "MEN KAIDAMYN", "en": "MEN KAIDAMYN", "ru": "MEN KAIDAMYN", "year": 2023, "type": "album" },
-        { "kz": "EKÉK", "en": "EKÉK", "ru": "EKÉK", "year": 2021, "type": "album" },
-        { "kz": "Bashtalos'", "en": "Bashtalos'", "ru": "Bashtalos'", "year": 2018, "type": "album" },
-        { "kz": "Jogolgon Tumar", "en": "Jogolgon Tumar", "ru": "Jogolgon Tumar", "year": 2026, "type": "single" },
-        { "kz": "Anything real", "en": "Anything real", "ru": "Anything real", "year": 2024, "type": "single" }
+        {
+          "kz": "MEN KAIDAMYN",
+          "en": "MEN KAIDAMYN",
+          "ru": "MEN KAIDAMYN",
+          "year": 2023,
+          "type": "album",
+          "cover": ""
+        },
+        {
+          "kz": "EKÉK",
+          "en": "EKÉK",
+          "ru": "EKÉK",
+          "year": 2021,
+          "type": "album",
+          "cover": ""
+        },
+        {
+          "kz": "Bashtalos'",
+          "en": "Bashtalos'",
+          "ru": "Bashtalos'",
+          "year": 2018,
+          "type": "album",
+          "cover": ""
+        },
+        {
+          "kz": "Jogolgon Tumar",
+          "en": "Jogolgon Tumar",
+          "ru": "Jogolgon Tumar",
+          "year": 2026,
+          "type": "single",
+          "cover": ""
+        },
+        {
+          "kz": "Anything real",
+          "en": "Anything real",
+          "ru": "Anything real",
+          "year": 2024,
+          "type": "single",
+          "cover": ""
+        }
       ]
     },
     {
@@ -188,8 +283,22 @@
         "youtube": ""
       },
       "releases": [
-        { "kz": "ВЗРЫВ", "en": "VZRYV", "ru": "ВЗРЫВ", "year": 2022, "type": "album" },
-        { "kz": "Рухани кенгуру", "en": "Ruhani Kenguru", "ru": "Рухани кенгуру", "year": 2019, "type": "album" }
+        {
+          "kz": "ВЗРЫВ",
+          "en": "VZRYV",
+          "ru": "ВЗРЫВ",
+          "year": 2022,
+          "type": "album",
+          "cover": ""
+        },
+        {
+          "kz": "Рухани кенгуру",
+          "en": "Ruhani Kenguru",
+          "ru": "Рухани кенгуру",
+          "year": 2019,
+          "type": "album",
+          "cover": ""
+        }
       ]
     },
     {
@@ -197,7 +306,7 @@
       "color": "#1a1500",
       "accent": "#f0d080",
       "initials": "МТ",
-      "photo": "images/moloko.jpg",
+      "photo": "",
       "kz": {
         "name": "molokoetazka",
         "genre": "Инди / Электроника",
@@ -225,32 +334,70 @@
       "releases": []
     }
   ],
-
   "events": [
     {
       "day": 14,
-      "month": { "kz": "МАУ", "en": "JUN", "ru": "ИЮН" },
-      "kz": { "name": "Алматы Шоукейс", "venue": "Tochka Bar, Алматы" },
-      "en": { "name": "Almaty Showcase", "venue": "Tochka Bar, Almaty" },
-      "ru": { "name": "Алматы Шоукейс", "venue": "Tochka Bar, Алматы" },
+      "month": {
+        "kz": "МАУ",
+        "en": "JUN",
+        "ru": "ИЮН"
+      },
+      "kz": {
+        "name": "Алматы Шоукейс",
+        "venue": "Tochka Bar, Алматы"
+      },
+      "en": {
+        "name": "Almaty Showcase",
+        "venue": "Tochka Bar, Almaty"
+      },
+      "ru": {
+        "name": "Алматы Шоукейс",
+        "venue": "Tochka Bar, Алматы"
+      },
       "status": "tickets",
       "link": ""
     },
     {
       "day": 22,
-      "month": { "kz": "МАУ", "en": "JUN", "ru": "ИЮН" },
-      "kz": { "name": "dudeontheguitar — тікелей", "venue": "ЦДОС, Алматы" },
-      "en": { "name": "dudeontheguitar — Live", "venue": "CDOS, Almaty" },
-      "ru": { "name": "dudeontheguitar — живой концерт", "venue": "ЦДОС, Алматы" },
+      "month": {
+        "kz": "МАУ",
+        "en": "JUN",
+        "ru": "ИЮН"
+      },
+      "kz": {
+        "name": "dudeontheguitar — тікелей",
+        "venue": "ЦДОС, Алматы"
+      },
+      "en": {
+        "name": "dudeontheguitar — Live",
+        "venue": "CDOS, Almaty"
+      },
+      "ru": {
+        "name": "dudeontheguitar — живой концерт",
+        "venue": "ЦДОС, Алматы"
+      },
       "status": "few",
       "link": ""
     },
     {
       "day": 5,
-      "month": { "kz": "ШИЛ", "en": "JUL", "ru": "ИЮЛ" },
-      "kz": { "name": "SAMRATTAMA — Barsakelmes", "venue": "ЦеLinny, Алматы" },
-      "en": { "name": "SAMRATTAMA — Barsakelmes", "venue": "Tselliny, Almaty" },
-      "ru": { "name": "SAMRATTAMA — Barsakelmes", "venue": "Цеlinny, Алматы" },
+      "month": {
+        "kz": "ШИЛ",
+        "en": "JUL",
+        "ru": "ИЮЛ"
+      },
+      "kz": {
+        "name": "SAMRATTAMA — Barsakelmes",
+        "venue": "ЦеLinny, Алматы"
+      },
+      "en": {
+        "name": "SAMRATTAMA — Barsakelmes",
+        "venue": "Tselliny, Almaty"
+      },
+      "ru": {
+        "name": "SAMRATTAMA — Barsakelmes",
+        "venue": "Цеlinny, Алматы"
+      },
       "status": "tickets",
       "link": ""
     }
