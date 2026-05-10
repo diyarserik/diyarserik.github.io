@@ -7,21 +7,9 @@
       "ru": "независимый лейбл · алматы · с 2019"
     },
     "hero": {
-      "kz": [
-        "ДАЛАДАН",
-        "ШЫҚҚАН",
-        "ДЫБЫС"
-      ],
-      "en": [
-        "SOUND",
-        "FROM THE",
-        "STEPPE"
-      ],
-      "ru": [
-        "ЗВУК",
-        "ИЗ",
-        "СТЕПИ"
-      ]
+      "kz": ["ДАЛАДАН", "ШЫҚҚАН", "ДЫБЫС"],
+      "en": ["SOUND", "FROM THE", "STEPPE"],
+      "ru": ["ЗВУК", "ИЗ", "СТЕПИ"]
     },
     "description": {
       "kz": "Өздерінше дыбысталатындарға арналған инди-лейбл. Қазақстан және одан тыс.",
@@ -29,8 +17,8 @@
       "ru": "Инди-лейбл для тех, кто звучит по-своему. Казахстан и то, что за ним."
     },
     "stats": {
-      "artists": 8,
-      "releases": 31,
+      "artists": 5,
+      "releases": 18,
       "founded": 2019
     },
     "about": {
@@ -56,6 +44,7 @@
       }
     }
   },
+
   "artists": [
     {
       "id": "dudeontheguitar",
@@ -66,19 +55,19 @@
       "kz": {
         "name": "dudeontheguitar",
         "genre": "Инди-поп / Р&Б",
-        "bio": "Нурбек Елемес — Сарыағаштан шыққан музыкант. Алматы метро переходтарынан бастап, қазір елдің ең үлкен фестивальдарының сахнасына шықты. Қазақ және ағылшын тілдерінде жырлайды.",
+        "bio": "Нурбек Елемес — Сарыағаштан шыққан музыкант. Алматы метро өтпелерінен бастаған жолы бүгін ел фестивальдарының ірі сахналарына жетті. Қазақ және ағылшын тілдерін органикалық үйлестіреді.",
         "country": "Қазақстан"
       },
       "en": {
         "name": "dudeontheguitar",
         "genre": "Indie Pop / R&B",
-        "bio": "Nurbek Elemes started out busking in Almaty underpasses with an acoustic guitar. Now he headlines major Kazakh festivals. He sings in Kazakh and English, blending indie-pop with R&B and lo-fi textures.",
+        "bio": "Nurbek Elemes from Saryagash started busking in Almaty underpasses with one acoustic guitar. Now he headlines major Kazakh festivals. His music weaves Kazakh and English into something effortlessly his own.",
         "country": "Kazakhstan"
       },
       "ru": {
         "name": "dudeontheguitar",
         "genre": "Инди-поп / Р&Б",
-        "bio": "Нурбек Елемес родом из Сарыагаша. Начинал петь в подземных переходах и на алматинском Арбате с одной акустической гитарой. Сейчас выступает на крупнейших фестивалях страны. Поёт на казахском и английском.",
+        "bio": "Нурбек Елемес из Сарыагаша. Начинал петь в подземных переходах и на алматинском Арбате. Сейчас выступает на крупнейших фестивалях страны. Поёт на казахском и английском — органично и без усилий.",
         "country": "Казахстан"
       },
       "since": 2019,
@@ -88,321 +77,143 @@
         "youtube": ""
       },
       "releases": [
-        {
-          "kz": "Дәптер",
-          "en": "Dapter",
-          "ru": "Дәптер",
-          "year": 2023,
-          "type": "album"
-        },
-        {
-          "kz": "kõrpe",
-          "en": "kõrpe",
-          "ru": "kõrpe",
-          "year": 2021,
-          "type": "album"
-        },
-        {
-          "kz": "baq (feat. Jeltoksan.)",
-          "en": "baq (feat. Jeltoksan.)",
-          "ru": "baq (feat. Jeltoksan.)",
-          "year": 2022,
-          "type": "single"
-        },
-        {
-          "kz": "toq (feat. Yenlik)",
-          "en": "toq (feat. Yenlik)",
-          "ru": "toq (feat. Yenlik)",
-          "year": 2022,
-          "type": "single"
-        }
+        { "kz": "Дәптер", "en": "Dapter", "ru": "Дәптер", "year": 2023, "type": "album" },
+        { "kz": "kõrpe", "en": "kõrpe", "ru": "kõrpe", "year": 2021, "type": "album" },
+        { "kz": "baq (feat. Jeltoksan.)", "en": "baq (feat. Jeltoksan.)", "ru": "baq (feat. Jeltoksan.)", "year": 2022, "type": "single" },
+        { "kz": "toq (feat. Yenlik)", "en": "toq (feat. Yenlik)", "ru": "toq (feat. Yenlik)", "year": 2022, "type": "single" }
       ]
     },
     {
-      "id": "aida",
-      "color": "#1a3a2a",
-      "accent": "#4ade80",
-      "initials": "AK",
+      "id": "samrattama",
+      "color": "#0f1a0f",
+      "accent": "#a8d8a8",
+      "initials": "SI",
       "photo": "",
       "kz": {
-        "name": "Аида Қарымова",
-        "genre": "Электроника / Эмбиент",
-        "bio": "Аида қазақтың халық мотивтерін электрондық текстураларға ендіреді. Домбыра оқыған, содан кейін синтезді тапты.",
+        "name": "SAMRATTAMA",
+        "genre": "Инди / Альтернативті хип-хоп",
+        "bio": "Самрат Иржасов — Қостанайдан шыққан ақын-әнші. Атауы қазақша екі мағынаны береді: «Тама тайпасынан Самрат» және «Самрат болма» — өз жолыңды тап деген шақыру. Қазақ indie-сахнасының негізін қалаушылардың бірі.",
         "country": "Қазақстан"
       },
       "en": {
-        "name": "Aida Karimova",
-        "genre": "Electronic / Ambient",
-        "bio": "Aida crafts soundscapes weaving Kazakh folk motifs into deep electronic textures. Studied traditional dombra, then found synthesis.",
+        "name": "SAMRATTAMA",
+        "genre": "Indie / Alt Hip-Hop",
+        "bio": "Samrat Irzhasov is a singer-poet from Kostanay. His name has a double meaning in Kazakh: 'Samrat from the Tama tribe' and 'don't be Samrat' — find your own path. One of the founding voices of the Kazakh indie scene, featured in Dazed magazine.",
         "country": "Kazakhstan"
       },
       "ru": {
-        "name": "Аида Каримова",
-        "genre": "Электроника / Эмбиент",
-        "bio": "Аида создаёт пейзажи, вплетая казахские мотивы в электронные текстуры. Изучала домбру, нашла синтез.",
+        "name": "SAMRATTAMA",
+        "genre": "Инди / Альт хип-хоп",
+        "bio": "Самрат Иржасов — певец-поэт из Костаная. Его имя по-казахски двузначно: «Самрат из рода Тама» и «не будь Самратом» — найди свой путь. Один из основателей казахской инди-сцены, герой материала Dazed.",
         "country": "Казахстан"
       },
-      "since": 2020,
+      "since": 2017,
       "links": {
         "spotify": "",
         "instagram": "",
         "youtube": ""
       },
       "releases": [
-        {
-          "kz": "Таң атқан дала",
-          "en": "Steppes at Dawn",
-          "ru": "Рассвет над степью",
-          "year": 2023,
-          "type": "album"
-        },
-        {
-          "kz": "Тәңір EP",
-          "en": "Tengri EP",
-          "ru": "Тенгри EP",
-          "year": 2022,
-          "type": "ep"
-        },
-        {
-          "kz": "Тұзды көл",
-          "en": "Salt Lake Sessions",
-          "ru": "Сессии Солёного озера",
-          "year": 2021,
-          "type": "album"
-        }
+        { "kz": "ХЭМИНГУЭЙ В ШТАНАХ", "en": "HEMINGWAY IN PANTS", "ru": "ХЭМИНГУЭЙ В ШТАНАХ", "year": 2020, "type": "album" },
+        { "kz": "bitpeitin bit", "en": "bitpeitin bit", "ru": "bitpeitin bit", "year": 2025, "type": "single" },
+        { "kz": "gospozha pensia", "en": "gospozha pensia", "ru": "gospozha pensia", "year": 2025, "type": "single" }
       ]
     },
     {
-      "id": "zarina",
-      "color": "#1a1a2e",
-      "accent": "#a78bfa",
-      "initials": "ZN",
+      "id": "zere",
+      "color": "#1a0f1a",
+      "accent": "#d4a8d4",
+      "initials": "ZA",
       "photo": "",
       "kz": {
-        "name": "Зарина Нұрланова",
-        "genre": "Инди-поп / Фолк",
-        "bio": "Зарина үш тілде — қазақша, орысша, ағылшынша — ән жазады. Дебюттік альбомы жылдың үздіктер тізіміне кірді.",
-        "country": "Қазақстан"
+        "name": "Зере Асылбек",
+        "genre": "Альтернативті / Фолк",
+        "bio": "Бішкектен шыққан Зере Асылбек — Орталық Азияның ең батыл дауыстарының бірі. «Қыз» клипі вирусқа айналып, өлім қауіптерін тудырды. Оның музыкасы әйел теңдігі мен қырғыз дәстүрін заманауи дыбыспен ұштастырады.",
+        "country": "Қырғызстан"
       },
       "en": {
-        "name": "Zarina Nurlanovna",
-        "genre": "Indie Pop / Folk",
-        "bio": "Zarina writes in three languages — Kazakh, Russian, English — stitching them together effortlessly. Her debut made numerous year-end lists.",
-        "country": "Kazakhstan"
+        "name": "Zere Asylbek",
+        "genre": "Alternative / Folk",
+        "bio": "Bishkek-born Zere is one of Central Asia's most fearless voices. Her debut video 'Kyz' went viral and drew death threats. Her music blends Kyrgyz tradition with contemporary alternative sound — feminist, urgent, and deeply personal.",
+        "country": "Kyrgyzstan"
       },
       "ru": {
-        "name": "Зарина Нурланова",
-        "genre": "Инди-поп / Фолк",
-        "bio": "Зарина пишет на трёх языках — казахском, русском, английском. Дебютный альбом в списках лучших года.",
-        "country": "Казахстан"
+        "name": "Зере Асылбек",
+        "genre": "Альтернатива / Фолк",
+        "bio": "Зере Асылбек из Бишкека — один из самых смелых голосов Центральной Азии. Её дебютный клип «Кыз» вызвал угрозы смерти. Музыка соединяет кыргызскую традицию с современным звуком — феминистская, острая, личная.",
+        "country": "Кыргызстан"
       },
-      "since": 2022,
+      "since": 2018,
       "links": {
-        "spotify": "",
+        "spotify": "https://open.spotify.com/artist/5uxzY7CK473qPFHBaHH0cn",
         "instagram": "",
         "youtube": ""
       },
       "releases": [
-        {
-          "kz": "Үш тіл",
-          "en": "Three Tongues",
-          "ru": "Три языка",
-          "year": 2024,
-          "type": "album"
-        },
-        {
-          "kz": "Алаша",
-          "en": "Alasha",
-          "ru": "Алаша",
-          "year": 2023,
-          "type": "single"
-        },
-        {
-          "kz": "Бірінші жарық",
-          "en": "First Light",
-          "ru": "Первый свет",
-          "year": 2022,
-          "type": "album"
-        }
+        { "kz": "MEN KAIDAMYN", "en": "MEN KAIDAMYN", "ru": "MEN KAIDAMYN", "year": 2023, "type": "album" },
+        { "kz": "EKÉK", "en": "EKÉK", "ru": "EKÉK", "year": 2021, "type": "album" },
+        { "kz": "Bashtalos'", "en": "Bashtalos'", "ru": "Bashtalos'", "year": 2018, "type": "album" },
+        { "kz": "Jogolgon Tumar", "en": "Jogolgon Tumar", "ru": "Jogolgon Tumar", "year": 2026, "type": "single" },
+        { "kz": "Anything real", "en": "Anything real", "ru": "Anything real", "year": 2024, "type": "single" }
       ]
     },
     {
-      "id": "yerlan",
-      "color": "#2a1a0e",
-      "accent": "#fb923c",
-      "initials": "YD",
+      "id": "balkhashdreaming",
+      "color": "#0a0f1a",
+      "accent": "#a8c4d4",
+      "initials": "БС",
       "photo": "",
       "kz": {
-        "name": "Ерлан Жақсыбеков",
-        "genre": "Хип-хоп / Рэп",
-        "bio": "Ерлан қазақтың ақындық дәстүрін қазіргі трэппен ұштастырады. Қала көшелеріне арналған.",
+        "name": "Балхаш снится",
+        "genre": "Поэзия / Пост-панк",
+        "bio": "«Балхаш снится» — Алматының тиімді және эксперименталды дуэті. Тексттер мен дыбыстың серіктестігіне негізделген музыка — жеке, қалалық, постсоветтік. Bandcamp-та белсенді.",
         "country": "Қазақстан"
       },
       "en": {
-        "name": "Yerlan Dzhaksybekov",
-        "genre": "Hip-Hop / Rap",
-        "bio": "Yerlan blends Kazakh lyrical tradition with contemporary trap. Image-rich verses drawn from the oral poetry of the akyn, for city streets.",
+        "name": "Балхаш снится",
+        "genre": "Spoken Word / Post-punk",
+        "bio": "Balkhashdreaming is an Almaty duo building music from the partnership of text and sound — intimate, urban, post-Soviet. Their albums feel like field recordings from inside a city that's trying to understand itself.",
         "country": "Kazakhstan"
       },
       "ru": {
-        "name": "Ерлан Джаксыбеков",
-        "genre": "Хип-хоп / Рэп",
-        "bio": "Ерлан смешивает казахскую лирическую традицию с трэпом. Тексты из устной поэзии акынов — для городских улиц.",
-        "country": "Казахстан"
-      },
-      "since": 2021,
-      "links": {
-        "spotify": "",
-        "instagram": "",
-        "youtube": ""
-      },
-      "releases": [
-        {
-          "kz": "Бетон Көшпенді",
-          "en": "Concrete Nomad",
-          "ru": "Бетон Кочевник",
-          "year": 2024,
-          "type": "album"
-        },
-        {
-          "kz": "Қарғы EP",
-          "en": "Karghy EP",
-          "ru": "Каргы EP",
-          "year": 2023,
-          "type": "ep"
-        },
-        {
-          "kz": "Құрылтай",
-          "en": "Kurultai",
-          "ru": "Курылтай",
-          "year": 2022,
-          "type": "album"
-        }
-      ]
-    },
-    {
-      "id": "marat",
-      "color": "#1a1a1a",
-      "accent": "#94a3b8",
-      "initials": "MB",
-      "photo": "",
-      "kz": {
-        "name": "Марат Бектуров",
-        "genre": "Эксперименталды / Дрон",
-        "bio": "Марат Қазақстан даласы мен Арал теңізі өңірінен жазылған дыбыстардан дрон-композициялар жасайды.",
-        "country": "Қазақстан"
-      },
-      "en": {
-        "name": "Marat Bekturov",
-        "genre": "Experimental / Drone",
-        "bio": "Marat builds long-form drone compositions from field recordings across the Kazakh steppe and Aral Sea region.",
-        "country": "Kazakhstan"
-      },
-      "ru": {
-        "name": "Марат Бектуров",
-        "genre": "Эксперименталь / Дрон",
-        "bio": "Марат создаёт дрон-композиции из полевых записей степи и Аральского моря.",
+        "name": "Балхаш снится",
+        "genre": "Слово / Пост-панк",
+        "bio": "«Балхаш снится» — алматинский дуэт, строящий музыку на партнёрстве текста и звука. Личное, городское, постсоветское. Второй альбом — инвентаризация взрослеющего человека.",
         "country": "Казахстан"
       },
       "since": 2019,
       "links": {
         "spotify": "",
-        "instagram": "",
+        "instagram": "https://instagram.com/balkhashdreaming",
         "youtube": ""
       },
       "releases": [
-        {
-          "kz": "Арал Мемориа",
-          "en": "Aral Memoria",
-          "ru": "Арал Мемориа",
-          "year": 2023,
-          "type": "album"
-        },
-        {
-          "kz": "Жазық жазбалар",
-          "en": "Flatland Tapes",
-          "ru": "Записки равнины",
-          "year": 2022,
-          "type": "album"
-        }
+        { "kz": "ВЗРЫВ", "en": "VZRYV", "ru": "ВЗРЫВ", "year": 2022, "type": "album" },
+        { "kz": "Рухани кенгуру", "en": "Ruhani Kenguru", "ru": "Рухани кенгуру", "year": 2019, "type": "album" }
       ]
     },
     {
-      "id": "dana",
-      "color": "#1f1a2e",
-      "accent": "#f472b6",
-      "initials": "DA",
+      "id": "molokoetazka",
+      "color": "#1a1500",
+      "accent": "#f0d080",
+      "initials": "МТ",
       "photo": "",
       "kz": {
-        "name": "Дана Ахметова",
-        "genre": "Р&Б / Соул",
-        "bio": "Дананың дауысы — бетонға созылған жібек: жылы, тереңмәнді, Орталық Азия меланхолиясымен.",
+        "name": "molokoetazka",
+        "genre": "Инди / Электроника",
+        "bio": "molokoetazka — Qazaq Indie лейблінің артисі. Spotify-да белсенді.",
         "country": "Қазақстан"
       },
       "en": {
-        "name": "Dana Akhmetova",
-        "genre": "R&B / Soul",
-        "bio": "Dana's voice: silk stretched over concrete — warm and textured, with a Central Asian melancholy underneath.",
+        "name": "molokoetazka",
+        "genre": "Indie / Electronic",
+        "bio": "molokoetazka is an artist on the Qazaq Indie roster. Active on Spotify.",
         "country": "Kazakhstan"
       },
       "ru": {
-        "name": "Дана Ахметова",
-        "genre": "Р&Б / Соул",
-        "bio": "Голос Даны — шёлк на бетоне. Тёплый, фактурный, с казахстанской меланхолией внутри.",
-        "country": "Казахстан"
-      },
-      "since": 2022,
-      "links": {
-        "spotify": "",
-        "instagram": "",
-        "youtube": ""
-      },
-      "releases": [
-        {
-          "kz": "Түнгі базар",
-          "en": "Midnight Bazaar",
-          "ru": "Полночный базар",
-          "year": 2024,
-          "type": "album"
-        },
-        {
-          "kz": "Бал мен тұз",
-          "en": "Honey & Salt",
-          "ru": "Мёд и соль",
-          "year": 2023,
-          "type": "album"
-        },
-        {
-          "kz": "Warm EP",
-          "en": "Warm EP",
-          "ru": "Warm EP",
-          "year": 2022,
-          "type": "ep"
-        }
-      ]
-    },
-    {
-      "id": "ruslan",
-      "color": "#1a0a0a",
-      "accent": "#ef4444",
-      "initials": "RO",
-      "photo": "",
-      "kz": {
-        "name": "Руслан Оспанов",
-        "genre": "Техно / Индастриал",
-        "bio": "Руслан текноны азайту философиясымен жасайды — әр трек маңызды жиіліктерге дейін тазартылған.",
-        "country": "Қазақстан"
-      },
-      "en": {
-        "name": "Ruslan Ospanov",
-        "genre": "Techno / Industrial",
-        "bio": "Ruslan's hypnotic techno is built on reduction — every track stripped to essential frequencies. Almaty club fixture.",
-        "country": "Kazakhstan"
-      },
-      "ru": {
-        "name": "Руслан Оспанов",
-        "genre": "Техно / Индастриал",
-        "bio": "Техно Руслана — философия сокращения: трек до базовых частот. Основа клубной сцены Алматы.",
+        "name": "molokoetazka",
+        "genre": "Инди / Электроника",
+        "bio": "molokoetazka — артист лейбла Qazaq Indie. Активен на Spotify.",
         "country": "Казахстан"
       },
       "since": 2020,
@@ -411,135 +222,35 @@
         "instagram": "",
         "youtube": ""
       },
-      "releases": [
-        {
-          "kz": "Темір ендіктер",
-          "en": "Iron Latitudes",
-          "ru": "Железные широты",
-          "year": 2024,
-          "type": "album"
-        },
-        {
-          "kz": "Қызылорда Даб",
-          "en": "Kyzylorda Dub",
-          "ru": "Кызылорда Даб",
-          "year": 2023,
-          "type": "ep"
-        }
-      ]
-    },
-    {
-      "id": "symbat",
-      "color": "#0e1a1a",
-      "accent": "#22d3ee",
-      "initials": "SY",
-      "photo": "",
-      "kz": {
-        "name": "Символат",
-        "genre": "Авангард / Классика",
-        "bio": "Заманауи классика мен авангард арасында — Символат үнсіздіктен де, дыбыстан да жасайды. Алматы консерваториясының түлегі.",
-        "country": "Қазақстан"
-      },
-      "en": {
-        "name": "Symbat",
-        "genre": "Avant-garde / Classical",
-        "bio": "Between contemporary classical and avant-garde improvisation — Symbat builds from silence as much as sound. Almaty Conservatory graduate.",
-        "country": "Kazakhstan"
-      },
-      "ru": {
-        "name": "Символат",
-        "genre": "Авангард / Классика",
-        "bio": "Между современной классикой и авангардом — Символат строит из тишины не меньше, чем из звука. Выпускница Алматинской консерватории.",
-        "country": "Казахстан"
-      },
-      "since": 2023,
-      "links": {
-        "spotify": "",
-        "instagram": "",
-        "youtube": ""
-      },
-      "releases": [
-        {
-          "kz": "Интерстициал",
-          "en": "Interstitial",
-          "ru": "Интерстициал",
-          "year": 2024,
-          "type": "album"
-        },
-        {
-          "kz": "Қозғалмас формалар",
-          "en": "Still Forms",
-          "ru": "Неподвижные формы",
-          "year": 2023,
-          "type": "ep"
-        }
-      ]
+      "releases": []
     }
   ],
+
   "events": [
     {
       "day": 14,
-      "month": {
-        "kz": "МАУ",
-        "en": "JUN",
-        "ru": "ИЮН"
-      },
-      "kz": {
-        "name": "Алматы Шоукейс",
-        "venue": "Tochka Bar, Алматы"
-      },
-      "en": {
-        "name": "Almaty Showcase",
-        "venue": "Tochka Bar, Almaty"
-      },
-      "ru": {
-        "name": "Алматы Шоукейс",
-        "venue": "Tochka Bar, Алматы"
-      },
+      "month": { "kz": "МАУ", "en": "JUN", "ru": "ИЮН" },
+      "kz": { "name": "Алматы Шоукейс", "venue": "Tochka Bar, Алматы" },
+      "en": { "name": "Almaty Showcase", "venue": "Tochka Bar, Almaty" },
+      "ru": { "name": "Алматы Шоукейс", "venue": "Tochka Bar, Алматы" },
       "status": "tickets",
       "link": ""
     },
     {
       "day": 22,
-      "month": {
-        "kz": "МАУ",
-        "en": "JUN",
-        "ru": "ИЮН"
-      },
-      "kz": {
-        "name": "Зарина Нұрланова — тікелей",
-        "venue": "ЦДОС, Алматы"
-      },
-      "en": {
-        "name": "Zarina Nurlanovna — Live",
-        "venue": "CDOS, Almaty"
-      },
-      "ru": {
-        "name": "Зарина Нурланова — живой концерт",
-        "venue": "ЦДОС, Алматы"
-      },
+      "month": { "kz": "МАУ", "en": "JUN", "ru": "ИЮН" },
+      "kz": { "name": "dudeontheguitar — тікелей", "venue": "ЦДОС, Алматы" },
+      "en": { "name": "dudeontheguitar — Live", "venue": "CDOS, Almaty" },
+      "ru": { "name": "dudeontheguitar — живой концерт", "venue": "ЦДОС, Алматы" },
       "status": "few",
       "link": ""
     },
     {
       "day": 5,
-      "month": {
-        "kz": "ШИЛ",
-        "en": "JUL",
-        "ru": "ИЮЛ"
-      },
-      "kz": {
-        "name": "Руслан Оспанов — клуб кеші",
-        "venue": "Mekka Club, Алматы"
-      },
-      "en": {
-        "name": "Ruslan Ospanov — Club Night",
-        "venue": "Mekka Club, Almaty"
-      },
-      "ru": {
-        "name": "Руслан Оспанов — клубная ночь",
-        "venue": "Mekka Club, Алматы"
-      },
+      "month": { "kz": "ШИЛ", "en": "JUL", "ru": "ИЮЛ" },
+      "kz": { "name": "SAMRATTAMA — Barsakelmes", "venue": "ЦеLinny, Алматы" },
+      "en": { "name": "SAMRATTAMA — Barsakelmes", "venue": "Tselliny, Almaty" },
+      "ru": { "name": "SAMRATTAMA — Barsakelmes", "venue": "Цеlinny, Алматы" },
       "status": "tickets",
       "link": ""
     }
