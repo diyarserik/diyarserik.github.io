@@ -62,7 +62,7 @@
       "color": "#1a1a1a",
       "accent": "#ffffff",
       "initials": "NE",
-      "photo": "",
+      "photo": "images/dude.jpg",
       "kz": {
         "name": "dudeontheguitar",
         "genre": "Инди-поп / Р&Б",
@@ -127,7 +127,7 @@
       "color": "#0f1a0f",
       "accent": "#a8d8a8",
       "initials": "SI",
-      "photo": "",
+      "photo": "images/samrattama.jpeg",
       "kz": {
         "name": "SAMRATTAMA",
         "genre": "Инди / Альтернативті хип-хоп",
@@ -306,7 +306,7 @@
       "color": "#1a1500",
       "accent": "#f0d080",
       "initials": "МТ",
-      "photo": "",
+      "photo": "images/moloko.jpg",
       "kz": {
         "name": "molokoetazka",
         "genre": "Инди / Электроника",
