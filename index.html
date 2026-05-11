@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="kz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qazaq Indie Records</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,300&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f9f8f6;
+  --ink:#0d0d0d;
+  --muted:#9a9690;
+  --border:#e2ddd6;
+  --dark:#111110;
+  --red:#c41a1a;
+  --font-h:'Oswald',sans-serif;
+  --font-u:'Oswald',sans-serif;
+  --font-b:'Montserrat',sans-serif;
+  --nav-h:52px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-b);font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden}
+
+/* ── LOADING ── */
+#loading{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:999;transition:opacity .35s}
+#loading.gone{opacity:0;pointer-events:none}
+.loading-mark{font-family:var(--font-h);font-size:3rem;letter-spacing:.1em;color:var(--ink);animation:blink 1.2s infinite}
+@keyframes blink{0%,100%{opacity:.1}50%{opacity:1}}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav-h);background:var(--bg);border-bottom:1px solid var(--border);display:flex;align-items:stretch}
+.nav-logo{display:flex;align-items:center;padding:0 1.5rem;border-right:1px solid var(--border);cursor:pointer;flex-shrink:0;gap:.6rem}
+.nav-logo-mark{font-family:var(--font-h);font-size:1.6rem;letter-spacing:.06em;color:var(--ink);line-height:1}
+.nav-logo-sep{width:1px;height:18px;background:var(--border)}
+.nav-logo-sub{font-family:var(--font-b);font-size:.55rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;line-height:1.3}
+.nav-links{display:flex;align-items:stretch;list-style:none;flex:1}
+.nav-links button{background:none;border:none;border-right:1px solid var(--border);font-family:var(--font-b);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:0 1rem;cursor:pointer;transition:color .15s;white-space:nowrap}
+.nav-links button:hover{color:var(--ink)}
+.nav-links button.active{color:var(--ink);font-weight:500;box-shadow:inset 0 -2px 0 var(--red)}
+.nav-langs{display:flex;align-items:center;gap:1px;padding:0 1rem;border-left:1px solid var(--border);flex-shrink:0}
+.lb{background:none;border:none;font-family:var(--font-b);font-size:.58rem;letter-spacing:.1em;color:var(--muted);padding:5px 7px;cursor:pointer;transition:all .15s}
+.lb:hover{color:var(--ink)}
+.lb.active{color:var(--ink);font-weight:600;border-bottom:1.5px solid var(--ink)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:0 1rem;color:var(--ink);flex-direction:column;gap:5px;align-self:center}
+.nav-toggle span{display:block;width:20px;height:1px;background:currentColor}
+
+/* ── MOBILE MENU ── */
+.mob-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;background:var(--bg);z-index:190;flex-direction:column;border-top:1px solid var(--border);overflow-y:auto}
+.mob-menu.open{display:flex}
+.mob-menu button{background:none;border:none;border-bottom:1px solid var(--border);font-family:var(--font-h);font-size:2rem;letter-spacing:.06em;color:var(--muted);text-align:left;padding:1rem 1.5rem;cursor:pointer;transition:color .15s}
+.mob-menu button:hover,.mob-menu button.active{color:var(--ink)}
+.mob-langs{display:flex;gap:.5rem;padding:1rem 1.5rem}
+
+/* ── PAGES ── */
+.page{display:none;padding-top:var(--nav-h);min-height:100vh}
+.page.active{display:block;animation:fadeUp .3s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ── SHARED ── */
+.sec{padding:2.5rem 1.75rem}
+.sec-tag{font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:1rem}
+.btn{font-family:var(--font-b);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:.75rem 1.5rem;cursor:pointer;transition:all .15s;border:1px solid var(--ink)}
+.btn-fill{background:var(--ink);color:var(--bg)}
+.btn-fill:hover{opacity:.85}
+.btn-line{background:none;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--bg)}
+.btn-sm{font-size:.55rem;padding:.5rem 1rem;letter-spacing:.12em}
+.arrow-link{display:flex;align-items:center;gap:.4rem;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);cursor:pointer;transition:color .15s;background:none;border:none;font-family:var(--font-b)}
+.arrow-link:hover{color:var(--ink)}
+
+/* ════════════════════════════════
+   HOME — блочная структура как на фото
+════════════════════════════════ */
+
+/* ROW 1: Логотип-баннер */
+.home-banner{
+  border-bottom:1px solid var(--border);
+  padding:3rem 1.75rem 2.5rem;
+  display:grid;grid-template-columns:1fr auto;
+  align-items:end;gap:2rem;
+}
+.home-banner-title{
+  font-family:var(--font-h);
+  font-size:clamp(4rem,12vw,9rem);
+  line-height:.88;letter-spacing:.04em;
+  color:var(--ink);
+}
+.home-banner-meta{text-align:right}
+.home-banner-tag{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem}
+.home-banner-year{font-family:var(--font-h);font-size:1.8rem;color:var(--muted)}
+
+/* ROW 2: Три колонки — последний релиз | цитата | статистика */
+.home-row2{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid var(--border)}
+.hr2-block{padding:2rem 1.75rem;border-right:1px solid var(--border)}
+.hr2-block:last-child{border-right:none}
+.hr2-tag{font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;display:block}
+.hr2-title{font-family:var(--font-h);font-size:2.2rem;line-height:1;letter-spacing:.04em;margin-bottom:.4rem}
+.hr2-sub{font-size:.78rem;color:var(--muted);font-style:italic}
+.hr2-quote{font-family:var(--font-b);font-size:.9rem;line-height:1.7;color:var(--muted);font-weight:300;font-style:italic}
+.hr2-stats{display:flex;flex-direction:column;gap:1.25rem}
+.hr2-stat-n{font-family:var(--font-h);font-size:2.8rem;line-height:1;color:var(--ink)}
+.hr2-stat-l{font-size:.52rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+
+/* ROW 3: Артисты превью — горизонтальный скролл на мобайле */
+.home-artists-strip{border-bottom:1px solid var(--border)}
+.home-artists-hd{padding:1.25rem 1.75rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.home-artists-hd-title{font-family:var(--font-h);font-size:1.4rem;letter-spacing:.06em}
+.home-artists-row{display:grid;grid-template-columns:repeat(5,1fr)}
+.ha-card{border-right:1px solid var(--border);padding:1.5rem 1.25rem;cursor:pointer;transition:background .15s;display:flex;flex-direction:column;gap:.4rem}
+.ha-card:last-child{border-right:none}
+.ha-card:hover{background:#fff}
+.ha-num{font-size:.52rem;letter-spacing:.1em;color:var(--muted)}
+.ha-name{font-family:var(--font-h);font-size:1.1rem;letter-spacing:.04em;line-height:1.1}
+.ha-genre{font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.ha-photo{width:100%;aspect-ratio:1;object-fit:cover;object-position:center top;margin-top:.75rem;display:block}
+.ha-photo-placeholder{width:100%;aspect-ratio:1;background:var(--border);margin-top:.75rem;display:flex;align-items:center;justify-content:center}
+.ha-initials{font-family:var(--font-h);font-size:1.5rem;color:var(--muted)}
+
+/* ROW 4: Последние релизы | Ближайшее событие */
+.home-row4{display:grid;grid-template-columns:2fr 1fr;border-bottom:1px solid var(--border)}
+.hr4-l{border-right:1px solid var(--border);padding:2rem 1.75rem}
+.hr4-r{padding:2rem 1.75rem}
+.hr4-tag{font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;display:block}
+.hr4-rel-item{display:flex;align-items:center;gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s}
+.hr4-rel-item:last-child{border-bottom:none}
+.hr4-rel-item:hover{opacity:.7}
+.hr4-cover{width:44px;height:44px;object-fit:cover;flex-shrink:0;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:.45rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.hr4-cover img{width:44px;height:44px;object-fit:cover;display:block}
+.hr4-rel-name{font-size:.84rem;font-weight:500;flex:1}
+.hr4-rel-artist{font-size:.7rem;color:var(--muted);font-style:italic}
+.hr4-rel-type{font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--border);color:var(--muted);padding:2px 6px;flex-shrink:0}
+.hr4-event{display:flex;flex-direction:column;gap:.5rem}
+.hr4-ev-date{font-family:var(--font-h);font-size:3rem;line-height:1;letter-spacing:.04em}
+.hr4-ev-name{font-size:.9rem;font-weight:500;line-height:1.2}
+.hr4-ev-venue{font-size:.75rem;color:var(--muted);font-style:italic}
+.hr4-ev-pill{display:inline-block;margin-top:.5rem;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--ink);padding:3px 8px;cursor:pointer;transition:all .15s}
+.hr4-ev-pill:hover{background:var(--ink);color:var(--bg)}
+
+/* ROW 5: Пресс / медиа превью */
+.home-press{border-bottom:1px solid var(--border)}
+.home-press-hd{padding:1.25rem 1.75rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.home-press-hd-title{font-family:var(--font-h);font-size:1.4rem;letter-spacing:.06em}
+.press-row{display:grid;grid-template-columns:repeat(3,1fr)}
+.press-item{border-right:1px solid var(--border);padding:1.5rem 1.75rem;cursor:pointer;transition:background .15s;text-decoration:none;color:inherit;display:block}
+.press-item:last-child{border-right:none}
+.press-item:hover{background:#fff}
+.press-outlet{font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem}
+.press-title{font-size:.88rem;font-weight:500;line-height:1.35;margin-bottom:.4rem}
+.press-date{font-size:.65rem;color:var(--muted);font-style:italic}
+
+/* ROW 6: О нас внизу */
+.home-about{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border)}
+.ha-l{padding:3rem 1.75rem;border-right:1px solid var(--border);display:flex;flex-direction:column;justify-content:space-between}
+.ha-r{padding:3rem 1.75rem;background:var(--dark);color:var(--bg);display:flex;flex-direction:column;justify-content:flex-end}
+.ha-big{font-family:var(--font-h);font-size:clamp(2.5rem,6vw,4.5rem);line-height:.92;letter-spacing:.04em;margin-bottom:1.5rem}
+.ha-body{font-size:.82rem;line-height:1.85;color:var(--muted);font-weight:300;font-style:italic}
+.ha-r-quote{font-family:var(--font-h);font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.1;letter-spacing:.04em;margin-bottom:2rem}
+.ha-r-contacts{display:flex;flex-direction:column;gap:.6rem;border-top:1px solid rgba(255,255,255,.12);padding-top:1.5rem}
+.ha-r-contact-row{display:flex;justify-content:space-between;align-items:baseline}
+.ha-r-contact-label{font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.ha-r-contact-val{font-size:.75rem;color:rgba(255,255,255,.8)}
+
+/* ════════════════════════════════
+   ARTISTS MOSAIC
+════════════════════════════════ */
+.artists-pg{border-bottom:1px solid var(--border)}
+.artists-hd{padding:1.75rem 1.75rem 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:.75rem}
+.artists-hd-title{font-family:var(--font-h);font-size:clamp(2rem,6vw,3.5rem);letter-spacing:.04em}
+.artists-hd-count{font-size:.7rem;color:var(--muted);font-style:italic}
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr)}
+.mc{border-right:1px solid var(--border);border-bottom:1px solid var(--border);cursor:pointer;display:flex;flex-direction:column;position:relative;transition:background .2s;background:var(--bg)}
+.mc:nth-child(3n){border-right:none}
+.mc:hover{background:#fff}
+.mc.tall{grid-row:span 2}
+.mc-top{padding:1.5rem 1.5rem 1rem;flex:1;display:flex;flex-direction:column}
+.mc-num{font-size:.55rem;letter-spacing:.12em;color:var(--muted);margin-bottom:auto;padding-bottom:1.5rem}
+.mc-name{font-family:var(--font-h);font-size:clamp(1.2rem,2.5vw,1.6rem);letter-spacing:.04em;line-height:1;margin-bottom:.3rem}
+.mc-genre{font-size:.5rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.mc-dark{background:var(--dark);position:relative;overflow:hidden;flex-shrink:0}
+.mc-dark img{width:100%;height:auto;display:block;opacity:.85;transition:opacity .3s}
+.mc:hover .mc-dark img{opacity:.95}
+.mc-arrow{position:absolute;top:1rem;right:1.25rem;font-size:.75rem;color:var(--muted);transition:color .2s,transform .2s}
+.mc:hover .mc-arrow{color:var(--ink);transform:translate(2px,-2px)}
+
+/* ════════════════════════════════
+   DETAIL
+════════════════════════════════ */
+.detail-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - var(--nav-h));border-bottom:1px solid var(--border)}
+.detail-l{border-right:1px solid var(--border);display:flex;flex-direction:column}
+.detail-r{padding:2.5rem 1.75rem}
+.d-photo{width:100%;height:280px;object-fit:cover;object-position:center top;display:block;flex-shrink:0;border-bottom:1px solid var(--border)}
+.d-photo-placeholder{width:100%;height:280px;background:#e8e5e0;display:flex;align-items:center;justify-content:center;flex-shrink:0;border-bottom:1px solid var(--border)}
+.d-photo-initials{font-family:var(--font-h);font-size:4rem;letter-spacing:.06em;color:var(--border)}
+.detail-info{padding:2rem 1.75rem;flex:1}
+.back-btn{background:none;border:none;cursor:pointer;padding:0;font-family:var(--font-b);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:.4rem;margin-bottom:2rem;transition:color .15s}
+.back-btn:hover{color:var(--ink)}
+.d-genre{font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem}
+.d-name{font-family:var(--font-h);font-size:clamp(2rem,5vw,3.5rem);letter-spacing:.04em;line-height:.92;margin-bottom:1.25rem}
+.d-bio{font-size:.82rem;line-height:1.85;color:var(--muted);font-weight:300;font-style:italic;margin-bottom:1.5rem}
+.d-meta{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border)}
+.dm{padding:.9rem .75rem;text-align:center;border-right:1px solid var(--border)}
+.dm:last-child{border-right:none}
+.dm-v{font-family:var(--font-h);font-size:1.5rem;letter-spacing:.04em;color:var(--ink)}
+.dm-k{font-size:.46rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.2rem}
+.d-links{display:flex;gap:.4rem;margin-top:1.25rem;flex-wrap:wrap}
+.lnk{font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--border);color:var(--muted);padding:.4rem .8rem;text-decoration:none;transition:all .15s;font-family:var(--font-b)}
+.lnk:hover{border-color:var(--ink);color:var(--ink)}
+.disc-hd{font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding-bottom:.75rem;border-bottom:1px solid var(--border)}
+.disc-row{display:flex;align-items:center;padding:.75rem 0;border-bottom:1px solid var(--border);gap:1rem}
+.disc-row:last-child{border-bottom:none}
+.disc-cover{width:48px;height:48px;object-fit:cover;flex-shrink:0;display:block}
+.disc-cover-ph{width:48px;height:48px;flex-shrink:0;background:#e8e5e0;display:flex;align-items:center;justify-content:center;font-size:.42rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:center}
+.disc-info{flex:1;min-width:0}
+.disc-title{font-size:.82rem;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.disc-sub{font-size:.65rem;color:var(--muted);font-style:italic}
+.disc-tp{font-size:.44rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--border);color:var(--muted);padding:2px 5px;flex-shrink:0}
+
+/* ════════════════════════════════
+   RELEASES — card grid
+════════════════════════════════ */
+.rel-cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+}
+.rel-card{
+  background:var(--bg);
+  padding:0;
+  cursor:pointer;
+  transition:background .15s;
+  display:flex;flex-direction:column;
+}
+.rel-card:hover{background:#fff}
+.rel-card-cover{
+  width:100%;aspect-ratio:1;
+  background:var(--dark);
+  overflow:hidden;
+  position:relative;
+}
+.rel-card-cover img{
+  width:100%;height:100%;
+  object-fit:cover;display:block;
+  transition:opacity .2s;
+}
+.rel-card:hover .rel-card-cover img{opacity:.85}
+.rel-card-cover-ph{
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--dark);
+}
+.rel-card-cover-ph-inner{
+  width:40%;aspect-ratio:1;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+}
+.rel-card-info{
+  padding:.9rem 1rem 1rem;
+  border-top:1px solid var(--border);
+  flex:1;display:flex;flex-direction:column;gap:.2rem;
+}
+.rel-card-year{
+  font-size:.52rem;letter-spacing:.14em;
+  color:var(--red);font-family:var(--font-b);font-weight:600;
+}
+.rel-card-artist{
+  font-family:var(--font-h);font-size:1rem;
+  letter-spacing:.04em;line-height:1;
+  text-transform:uppercase;
+}
+.rel-card-title{
+  font-family:var(--font-b);font-size:.72rem;
+  color:var(--muted);font-style:italic;
+}
+.rel-card-bottom{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:auto;padding-top:.6rem;
+}
+.rel-card-format{
+  font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);
+}
+.rel-card-arrow{font-size:.8rem;color:var(--muted);transition:color .2s,transform .2s}
+.rel-card:hover .rel-card-arrow{color:var(--ink);transform:translate(2px,-2px)}
+@media(max-width:900px){.rel-cards{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.rel-cards{grid-template-columns:repeat(2,1fr)}}
+
+/* ════════════════════════════════
+   EVENTS
+════════════════════════════════ */
+.ev-row{display:grid;grid-template-columns:70px 1fr auto;align-items:center;gap:1.25rem;padding:1.5rem 0;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s}
+.ev-row:first-child{border-top:1px solid var(--border)}
+.ev-row:hover{background:#fff}
+.ev-date{text-align:center}
+.ev-day{font-family:var(--font-h);font-size:2.2rem;line-height:1;letter-spacing:.04em;color:var(--ink)}
+.ev-mon{font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.ev-name{font-weight:500;font-size:.88rem;margin-bottom:.2rem}
+.ev-venue{font-size:.74rem;color:var(--muted);font-style:italic}
+.ev-pill{font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .6rem;border:1px solid;white-space:nowrap;flex-shrink:0}
+.ep-on{border-color:var(--ink);color:var(--ink)}
+.ep-few{border-color:var(--red);color:var(--red)}
+
+/* ════════════════════════════════
+   PRESS / ПРЕСС-ЦЕНТР
+════════════════════════════════ */
+.press-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border);border-left:1px solid var(--border)}
+.press-card{border-right:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.75rem 1.5rem;text-decoration:none;color:inherit;display:block;transition:background .15s}
+.press-card:hover{background:#fff}
+.pc-outlet{font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem}
+.pc-title{font-size:.9rem;font-weight:500;line-height:1.35;margin-bottom:.6rem}
+.pc-excerpt{font-size:.75rem;color:var(--muted);font-style:italic;line-height:1.65;margin-bottom:.75rem}
+.pc-date{font-size:.6rem;color:var(--muted);letter-spacing:.06em}
+.pc-arrow{float:right;font-size:.75rem;color:var(--muted)}
+
+/* ════════════════════════════════
+   ABOUT
+════════════════════════════════ */
+.about-top{padding:3rem 1.75rem;border-bottom:1px solid var(--border)}
+.about-big{font-family:var(--font-h);font-size:clamp(2.5rem,8vw,6rem);line-height:.9;letter-spacing:.04em;margin-bottom:1.5rem}
+.about-body{font-size:.86rem;line-height:1.9;color:var(--muted);font-weight:300;font-style:italic;max-width:600px}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--border)}
+.srv{padding:2.5rem 1.75rem;border-right:1px solid var(--border)}
+.srv:last-child{border-right:none}
+.srv-n{font-family:var(--font-h);font-size:3rem;letter-spacing:.04em;color:var(--border);line-height:1;margin-bottom:1rem}
+.srv-title{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);font-weight:500;margin-bottom:.5rem}
+.srv-text{font-size:.78rem;line-height:1.8;color:var(--muted);font-weight:300;font-style:italic}
+.manifesto{padding:3rem 1.75rem;background:var(--ink);color:var(--bg)}
+.manifesto-text{font-family:var(--font-h);font-size:clamp(1.5rem,3.5vw,2.5rem);line-height:1.1;letter-spacing:.04em;max-width:700px}
+
+/* ════════════════════════════════
+   CONTACT
+════════════════════════════════ */
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);border-left:1px solid var(--border)}
+.ct-block{padding:2rem 1.75rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.ct-label{font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
+.ct-val{font-size:.88rem;font-weight:400;word-break:break-all;margin-bottom:.2rem}
+.ct-sub{font-size:.68rem;color:var(--muted);font-style:italic}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--border);padding:1.25rem 1.75rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.f-logo{font-family:var(--font-h);font-size:1.1rem;letter-spacing:.06em;color:var(--ink)}
+.f-links{display:flex;gap:1.25rem}
+.f-link{font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .15s}
+.f-link:hover{color:var(--ink)}
+.f-copy{font-size:.58rem;color:var(--muted);font-style:italic}
+
+/* ════════════════════════════════
+   RESPONSIVE
+════════════════════════════════ */
+@media(max-width:1024px){
+  .home-artists-row{grid-template-columns:repeat(3,1fr)}
+  .ha-card:nth-child(n+4){display:none}
+  .press-row{grid-template-columns:1fr 1fr}
+  .press-item:last-child{display:none}
+}
+@media(max-width:900px){
+  .mosaic{grid-template-columns:1fr 1fr}
+  .mc:nth-child(3n){border-right:1px solid var(--border)}
+  .mc:nth-child(2n){border-right:none}
+  .home-row2{grid-template-columns:1fr 1fr}
+  .home-row2 .hr2-block:last-child{grid-column:span 2;border-top:1px solid var(--border)}
+  .home-row4{grid-template-columns:1fr}
+  .hr4-l{border-right:none;border-bottom:1px solid var(--border)}
+  .press-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none}.nav-toggle{display:flex}.nav-langs{display:none}
+  .home-banner{grid-template-columns:1fr;gap:1rem}
+  .home-banner-meta{text-align:left}
+  .home-row2{grid-template-columns:1fr}
+  .hr2-block{border-right:none;border-bottom:1px solid var(--border)}
+  .home-artists-row{grid-template-columns:1fr 1fr}
+  .ha-card:nth-child(n+3){display:none}
+  .home-about{grid-template-columns:1fr}
+  .ha-r{border-top:1px solid var(--border)}
+  .detail-wrap{grid-template-columns:1fr}
+  .detail-l{border-right:none;border-bottom:1px solid var(--border)}
+  .detail-info{padding:1.5rem 1.25rem}
+  .detail-r{padding:1.5rem 1.25rem}
+  .d-photo,.d-photo-placeholder{height:200px}
+  .srv-grid{grid-template-columns:1fr}
+  .srv{border-right:none;border-bottom:1px solid var(--border)}
+  .ct-grid{grid-template-columns:1fr}
+  .press-grid{grid-template-columns:1fr}
+  .press-row{grid-template-columns:1fr}
+  footer{flex-direction:column;align-items:flex-start}
+  .ev-row{grid-template-columns:60px 1fr;gap:.75rem}
+  .ev-pill{display:none}
+  .sec{padding:2rem 1.25rem}
+  .home-banner{padding:2rem 1.25rem 1.75rem}
+  .home-artists-hd,.home-press-hd{padding:1rem 1.25rem}
+  .hr2-block,.hr4-l,.hr4-r{padding:1.5rem 1.25rem}
+  .ha-l,.ha-r{padding:2rem 1.25rem}
+  .about-top,.manifesto,.srv,.ct-block{padding:1.5rem 1.25rem}
+  .artists-hd{padding:1.25rem 1.25rem 1rem}
+  .mosaic{grid-template-columns:1fr 1fr}
+  .mc.tall{grid-row:span 1}
+  .rel-table th:nth-child(3),.rel-table td:nth-child(3){display:none}
+}
+@media(max-width:480px){
+  .mosaic{grid-template-columns:1fr}
+  .mc:nth-child(2n){border-right:1px solid var(--border)}
+  .home-artists-row{grid-template-columns:1fr}
+  .ha-card:nth-child(n+2){display:none}
+  .home-row4{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div id="loading"><div class="loading-mark">QI</div></div>
+
+<nav>
+  <div class="nav-logo" onclick="showPage('home')">
+    <div class="nav-logo-mark">QI</div>
+    <div class="nav-logo-sep"></div>
+    <div class="nav-logo-sub">Qazaq Indie<br>Records</div>
+  </div>
+  <ul class="nav-links">
+    <li><button data-nav="home"     onclick="showPage('home')"     data-i="n_home">Бас бет</button></li>
+    <li><button data-nav="artists"  onclick="showPage('artists')"  data-i="n_artists">Артистер</button></li>
+    <li><button data-nav="releases" onclick="showPage('releases')" data-i="n_releases">Релиздер</button></li>
+    <li><button data-nav="events"   onclick="showPage('events')"   data-i="n_events">Оқиғалар</button></li>
+    <li><button data-nav="press"    onclick="showPage('press')"    data-i="n_press">Пресс</button></li>
+    <li><button data-nav="about"    onclick="showPage('about')"    data-i="n_about">Біз туралы</button></li>
+    <li><button data-nav="contact"  onclick="showPage('contact')"  data-i="n_contact">Байланыс</button></li>
+  </ul>
+  <div class="nav-langs">
+    <button class="lb active" id="l-kz" onclick="setLang('kz')">KZ</button>
+    <button class="lb" id="l-en" onclick="setLang('en')">EN</button>
+    <button class="lb" id="l-ru" onclick="setLang('ru')">RU</button>
+  </div>
+  <button class="nav-toggle" onclick="togMenu()"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mob-menu" id="mob-menu">
+  <button data-nav="home"     onclick="mobileNav('home')"     data-i="n_home">Бас бет</button>
+  <button data-nav="artists"  onclick="mobileNav('artists')"  data-i="n_artists">Артистер</button>
+  <button data-nav="releases" onclick="mobileNav('releases')" data-i="n_releases">Релиздер</button>
+  <button data-nav="events"   onclick="mobileNav('events')"   data-i="n_events">Оқиғалар</button>
+  <button data-nav="press"    onclick="mobileNav('press')"    data-i="n_press">Пресс</button>
+  <button data-nav="about"    onclick="mobileNav('about')"    data-i="n_about">Біз туралы</button>
+  <button data-nav="contact"  onclick="mobileNav('contact')"  data-i="n_contact">Байланыс</button>
+  <div class="mob-langs">
+    <button class="lb active" id="ml-kz" onclick="setLang('kz');togMenu()">KZ</button>
+    <button class="lb" id="ml-en" onclick="setLang('en');togMenu()">EN</button>
+    <button class="lb" id="ml-ru" onclick="setLang('ru');togMenu()">RU</button>
+  </div>
+</div>
+
+<!-- ═══ HOME ═══ -->
+<div id="page-home" class="page active">
+
+  <!-- баннер -->
+  <div class="home-banner">
+    <div class="home-banner-title">QAZAQ<br>INDIE</div>
+    <div class="home-banner-meta">
+      <div class="home-banner-tag" data-i="banner_tag">Records · Almaty</div>
+      <div class="home-banner-year">Est. 2019</div>
+    </div>
+  </div>
+
+  <!-- три колонки -->
+  <div class="home-row2">
+    <div class="hr2-block">
+      <span class="hr2-tag" data-i="latest_tag">Соңғы релиз</span>
+      <div class="hr2-title" id="h-lt-title">—</div>
+      <div class="hr2-sub" id="h-lt-sub">—</div>
+    </div>
+    <div class="hr2-block">
+      <span class="hr2-tag" data-i="label_quote_tag">Біз туралы</span>
+      <p class="hr2-quote" id="h-quote">—</p>
+    </div>
+    <div class="hr2-block">
+      <div class="hr2-stats">
+        <div><div class="hr2-stat-n" id="s-art">—</div><div class="hr2-stat-l" data-i="st_a">Артист</div></div>
+        <div><div class="hr2-stat-n" id="s-rel">—</div><div class="hr2-stat-l" data-i="st_r">Релиз</div></div>
+        <div><div class="hr2-stat-n" id="s-fnd">—</div><div class="hr2-stat-l" data-i="st_f">Жыл</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- артисты превью -->
+  <div class="home-artists-strip">
+    <div class="home-artists-hd">
+      <div class="home-artists-hd-title" data-i="n_artists">АРТИСТЕР</div>
+      <button class="arrow-link" onclick="showPage('artists')" data-i="all_artists">Барлығы →</button>
+    </div>
+    <div class="home-artists-row" id="h-artists-row"></div>
+  </div>
+
+  <!-- релизы + событие -->
+  <div class="home-row4">
+    <div class="hr4-l">
+      <span class="hr4-tag" data-i="n_releases">Соңғы релиздер</span>
+      <div id="h-releases-list"></div>
+      <div style="margin-top:1.25rem">
+        <button class="arrow-link" onclick="showPage('releases')" data-i="all_releases">Барлық релиздер →</button>
+      </div>
+    </div>
+    <div class="hr4-r">
+      <span class="hr4-tag" data-i="next_event">Келесі оқиға</span>
+      <div id="h-event"></div>
+    </div>
+  </div>
+
+  <!-- пресс превью -->
+  <div class="home-press" id="h-press-wrap">
+    <div class="home-press-hd">
+      <div class="home-press-hd-title" data-i="n_press">ПРЕСС</div>
+      <button class="arrow-link" onclick="showPage('press')" data-i="all_press">Барлығы →</button>
+    </div>
+    <div class="press-row" id="h-press-row"></div>
+  </div>
+
+  <!-- о нас -->
+  <div class="home-about">
+    <div class="ha-l">
+      <div>
+        <div class="ha-big" data-i="about_big">БІЗДІҢ<br>ЖАЙЫМЫЗ</div>
+        <p class="ha-body" id="h-about-body">—</p>
+      </div>
+      <div style="margin-top:2rem">
+        <button class="btn btn-line btn-sm" onclick="showPage('about')" data-i="read_more">Толығырақ →</button>
+      </div>
+    </div>
+    <div class="ha-r">
+      <div class="ha-r-quote" id="h-manifesto">—</div>
+      <div class="ha-r-contacts" id="h-contacts"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ARTISTS ═══ -->
+<div id="page-artists" class="page">
+  <div class="artists-pg">
+    <div class="artists-hd">
+      <div class="artists-hd-title" data-i="n_artists">Артистер</div>
+      <div class="artists-hd-count" id="art-cnt"></div>
+    </div>
+    <div class="mosaic" id="mosaic"></div>
+  </div>
+</div>
+
+<!-- ═══ ARTIST DETAIL ═══ -->
+<div id="page-artist-detail" class="page">
+  <div class="detail-wrap">
+    <div class="detail-l">
+      <div id="d-photo-wrap"></div>
+      <div class="detail-info">
+        <button class="back-btn" onclick="goBack()">← <span data-i="back_text">Артистерге</span></button>
+        <div class="d-genre" id="d-genre"></div>
+        <div class="d-name"  id="d-name"></div>
+        <p class="d-bio"     id="d-bio"></p>
+        <div class="d-meta"  id="d-meta"></div>
+        <div class="d-links" id="d-links"></div>
+      </div>
+    </div>
+    <div class="detail-r">
+      <div class="disc-hd" data-i="discog">Дискография</div>
+      <div id="d-disc"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ RELEASES ═══ -->
+<div id="page-releases" class="page">
+  <div class="sec">
+    <span class="sec-tag" data-i="n_releases">Релиздер</span>
+    <div class="rel-cards" id="rel-body"></div>
+  </div>
+</div>
+
+<!-- ═══ EVENTS ═══ -->
+<div id="page-events" class="page">
+  <div class="sec">
+    <span class="sec-tag" data-i="n_events">Оқиғалар</span>
+    <div id="ev-list"></div>
+  </div>
+</div>
+
+<!-- ═══ PRESS ═══ -->
+<div id="page-press" class="page">
+  <div class="sec">
+    <span class="sec-tag" data-i="n_press">Пресс-орталық</span>
+    <div class="press-grid" id="press-grid"></div>
+  </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<div id="page-about" class="page">
+  <div class="about-top">
+    <div class="about-big" data-i="about_big">БІЗДІҢ<br>ЖАЙЫМЫЗ</div>
+    <p class="about-body" id="about-body">—</p>
+  </div>
+  <div class="srv-grid">
+    <div class="srv"><div class="srv-n">01</div><div class="srv-title" data-i="s1t">Продакшн</div><p class="srv-text" data-i="s1b">Демодан мастерге дейін.</p></div>
+    <div class="srv"><div class="srv-n">02</div><div class="srv-title" data-i="s2t">Дистрибуция</div><p class="srv-text" data-i="s2b">Барлық платформада.</p></div>
+    <div class="srv"><div class="srv-n">03</div><div class="srv-title" data-i="s3t">Букинг</div><p class="srv-text" data-i="s3b">Концерттер, фестивальдар, турне.</p></div>
+  </div>
+  <div class="manifesto"><p class="manifesto-text" id="manifesto">—</p></div>
+</div>
+
+<!-- ═══ CONTACT ═══ -->
+<div id="page-contact" class="page">
+  <div class="sec">
+    <span class="sec-tag" data-i="n_contact">Байланыс</span>
+    <div class="ct-grid" id="ct-grid"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="f-logo">QAZAQ INDIE</div>
+  <div class="f-links" id="f-links"></div>
+  <div class="f-copy" id="f-copy">—</div>
+</footer>
+
+<script>
+const UI={
+  kz:{
+    n_home:'Бас бет',n_artists:'Артистер',n_releases:'Релиздер',n_events:'Оқиғалар',
+    n_press:'Пресс',n_about:'Біз туралы',n_contact:'Байланыс',
+    banner_tag:'Records · Алматы',latest_tag:'Соңғы релиз',label_quote_tag:'Лейбл туралы',
+    st_a:'Артист',st_r:'Релиз',st_f:'Жыл',all_artists:'Барлығы →',all_releases:'Барлық релиздер →',
+    all_press:'Барлығы →',next_event:'Келесі оқиға',
+    about_big:'БІЗДІҢ\nЖАЙЫМЫЗ',read_more:'Толығырақ →',
+    back_text:'Артистерге',discog:'Дискография',
+    col_t:'Атауы',col_a:'Артист',col_f:'Формат',col_y:'Жыл',
+    s1t:'Продакшн',s1b:'Демодан мастерге дейін толық студиялық қолдау.',
+    s2t:'Дистрибуция',s2b:'Барлық платформада жаһандық цифрлық таралым.',
+    s3t:'Букинг',s3b:'Концерттер, фестивальдар, ТМД және Еуропа бойынша турне.',
+    lc:'Ел',ls:'Бастап',la:'Альбом',
+    lsp:'Spotify',lap:'Apple Music',lyt:'YouTube',lig:'Instagram',lbc:'Bandcamp',lsc:'SoundCloud',
+    bti:'Билеттер',bfw:'Аз орын',
+    lb:'Букинг',lbs:'Концерттер · фестивальдар · турне',
+    ld:'Демо',lds:'Бәрін тыңдаймыз',lp:'Баспасөз',lps:'БАҚ · сұхбат · EPK',lg:'Жалпы',
+    ac_sfx:'топ',footer:'© 2025 Qazaq Indie Records · Алматы',
+  },
+  en:{
+    n_home:'Home',n_artists:'Artists',n_releases:'Releases',n_events:'Events',
+    n_press:'Press',n_about:'About',n_contact:'Contact',
+    banner_tag:'Records · Almaty',latest_tag:'Latest release',label_quote_tag:'About the label',
+    st_a:'Artists',st_r:'Releases',st_f:'Founded',all_artists:'All artists →',all_releases:'All releases →',
+    all_press:'All press →',next_event:'Next event',
+    about_big:'ABOUT\nUS',read_more:'Read more →',
+    back_text:'Back to Artists',discog:'Discography',
+    col_t:'Title',col_a:'Artist',col_f:'Format',col_y:'Year',
+    s1t:'Production',s1b:'Full cycle from demo to master. In-house.',
+    s2t:'Distribution',s2b:'Global digital distribution across all platforms.',
+    s3t:'Booking',s3b:'Shows, festivals, tours across CIS and Europe.',
+    lc:'Country',ls:'Since',la:'Releases',
+    lsp:'Spotify',lap:'Apple Music',lyt:'YouTube',lig:'Instagram',lbc:'Bandcamp',lsc:'SoundCloud',
+    bti:'Tickets',bfw:'Few left',
+    lb:'Booking',lbs:'Shows · festivals · tours',
+    ld:'Demos',lds:'We listen to everything',lp:'Press',lps:'Media · interviews · EPKs',lg:'General',
+    ac_sfx:'acts',footer:'© 2025 Qazaq Indie Records · Almaty',
+  },
+  ru:{
+    n_home:'Главная',n_artists:'Артисты',n_releases:'Релизы',n_events:'События',
+    n_press:'Пресса',n_about:'О нас',n_contact:'Контакт',
+    banner_tag:'Records · Алматы',latest_tag:'Последний релиз',label_quote_tag:'О лейбле',
+    st_a:'Артистов',st_r:'Релизов',st_f:'Основан',all_artists:'Все артисты →',all_releases:'Все релизы →',
+    all_press:'Вся пресса →',next_event:'Ближайшее событие',
+    about_big:'О НАС',read_more:'Подробнее →',
+    back_text:'К артистам',discog:'Дискография',
+    col_t:'Название',col_a:'Артист',col_f:'Формат',col_y:'Год',
+    s1t:'Продакшн',s1b:'Полный цикл от демо до мастера.',
+    s2t:'Дистрибуция',s2b:'Глобальная цифровая дистрибуция.',
+    s3t:'Букинг',s3b:'Концерты, фестивали, туры по СНГ и Европе.',
+    lc:'Страна',ls:'С года',la:'Релизов',
+    lsp:'Spotify',lap:'Apple Music',lyt:'YouTube',lig:'Instagram',lbc:'Bandcamp',lsc:'SoundCloud',
+    bti:'Билеты',bfw:'Мало мест',
+    lb:'Букинг',lbs:'Концерты · фестивали · туры',
+    ld:'Демо',lds:'Слушаем всё',lp:'Пресса',lps:'СМИ · интервью · EPK',lg:'Общий',
+    ac_sfx:'артистов',footer:'© 2025 Qazaq Indie Records · Алматы',
+  },
+};
+
+let lang='kz', D=null, prevPage=null, curPage='home';
+
+async function loadData(){
+  try{
+    const r=await fetch('data.json');
+    D=await r.json();
+    boot();
+  } catch(e){
+    document.getElementById('loading').innerHTML='<div style="font-family:monospace;font-size:.75rem;text-align:center;padding:2rem;color:#c0392b">data.json не найден.<br>Оба файла должны быть в одной папке.</div>';
+  }
+}
+
+function boot(){
+  document.getElementById('loading').classList.add('gone');
+  render();
+}
+
+function t(k){return UI[lang][k]||k}
+
+function setLang(l){
+  lang=l;
+  ['kz','en','ru'].forEach(x=>{
+    ['l-','ml-'].forEach(p=>{const b=document.getElementById(p+x);if(b)b.classList.toggle('active',x===l)});
+  });
+  document.documentElement.lang=l;
+  applyUI();render();
+  const dp=document.getElementById('page-artist-detail');
+  if(dp.classList.contains('active')&&dp.dataset.aid) openArtist(dp.dataset.aid);
+}
+
+function applyUI(){
+  document.querySelectorAll('[data-i]').forEach(el=>{
+    const k=el.getAttribute('data-i');
+    if(UI[lang][k]!==undefined) el.textContent=UI[lang][k];
+  });
+}
+
+function showPage(p){
+  prevPage=curPage;
+  curPage=p;
+  document.querySelectorAll('.page').forEach(e=>e.classList.remove('active'));
+  document.querySelectorAll('[data-nav]').forEach(e=>e.classList.remove('active'));
+  document.getElementById('page-'+p).classList.add('active');
+  document.querySelectorAll(`[data-nav="${p}"]`).forEach(e=>e.classList.add('active'));
+  window.scrollTo(0,0);
+}
+
+function goBack(){
+  // Go back to previous page, default to artists
+  const target = prevPage && prevPage !== 'artist-detail' ? prevPage : 'artists';
+  showPage(target);
+}
+
+function mobileNav(p){showPage(p);document.getElementById('mob-menu').classList.remove('open')}
+function togMenu(){document.getElementById('mob-menu').classList.toggle('open')}
+
+/* ── HOME ── */
+function renderHome(){
+  const lb=D.label;
+  // latest release
+  const allR=D.artists.flatMap(a=>a.releases.map(r=>({...r,an:a[lang].name}))).sort((a,b)=>b.year-a.year);
+  if(allR[0]){
+    document.getElementById('h-lt-title').textContent=allR[0][lang];
+    document.getElementById('h-lt-sub').textContent=allR[0].an+' · '+allR[0].year;
+  }
+  // quote
+  document.getElementById('h-quote').textContent=lb.manifesto[lang];
+  // stats
+  document.getElementById('s-art').textContent=lb.stats.artists;
+  document.getElementById('s-rel').textContent=lb.stats.releases;
+  document.getElementById('s-fnd').textContent="'"+String(lb.stats.founded).slice(2);
+  // artists strip
+  document.getElementById('h-artists-row').innerHTML=D.artists.map(a=>{
+    const photoEl=a.photo
+      ?`<img class="ha-photo" src="${a.photo}" alt="${a[lang].name}" loading="lazy">`
+      :`<div class="ha-photo-placeholder"><div class="ha-initials">${a.initials}</div></div>`;
+    return `<div class="ha-card" onclick="openArtist('${a.id}')">
+      <div class="ha-num">${String(D.artists.indexOf(a)+1).padStart(2,'0')}</div>
+      <div class="ha-name">${a[lang].name}</div>
+      <div class="ha-genre">${a[lang].genre}</div>
+      ${photoEl}
+    </div>`;
+  }).join('');
+  // releases list (top 4)
+  document.getElementById('h-releases-list').innerHTML=allR.slice(0,4).map(r=>{
+    const cover=r.cover
+      ?`<img src="${r.cover}" style="width:40px;height:40px;object-fit:cover;display:block">`
+      :`<div class="hr4-cover">${r.type.toUpperCase()}</div>`;
+    return `<div class="hr4-rel-item">
+      <div class="hr4-cover">${cover}</div>
+      <div style="flex:1;min-width:0">
+        <div class="hr4-rel-name">${r[lang]}</div>
+        <div class="hr4-rel-artist">${r.an}</div>
+      </div>
+      <span class="hr4-rel-type">${r.type.toUpperCase()}</span>
+    </div>`;
+  }).join('');
+  // next event
+  const ev=D.events[0];
+  if(ev){
+    document.getElementById('h-event').innerHTML=`
+      <div class="hr4-ev-date">${ev.day}<br>${ev.month[lang]}</div>
+      <div class="hr4-ev-name">${ev[lang].name}</div>
+      <div class="hr4-ev-venue">${ev[lang].venue}</div>
+      ${ev.link?`<a class="hr4-ev-pill" href="${ev.link}" target="_blank">${t('bti')}</a>`:`<span class="hr4-ev-pill" style="opacity:.5">${t('bti')}</span>`}
+    `;
+  }
+  // press preview (top 3)
+  const press=D.press||[];
+  if(press.length>0){
+    document.getElementById('h-press-row').innerHTML=press.slice(0,3).map(p=>`
+      <a class="press-item" href="${p.url}" target="_blank">
+        <div class="press-outlet">${p.outlet}</div>
+        <div class="press-title">${p.title[lang]||p.title.ru||p.title.en}</div>
+        <div class="press-date">${p.date}</div>
+      </a>`).join('');
+    document.getElementById('h-press-wrap').style.display='block';
+  } else {
+    document.getElementById('h-press-wrap').style.display='none';
+  }
+  // about
+  document.getElementById('h-about-body').textContent=lb.about[lang];
+  document.getElementById('h-manifesto').textContent='"'+lb.manifesto[lang]+'"';
+  // contacts bottom
+  const c=lb.contacts;
+  document.getElementById('h-contacts').innerHTML=`
+    <div class="ha-r-contact-row"><span class="ha-r-contact-label">Email</span><span class="ha-r-contact-val">${c.general}</span></div>
+    <div class="ha-r-contact-row"><span class="ha-r-contact-label">${t('lb')}</span><span class="ha-r-contact-val">${c.booking}</span></div>
+    <div class="ha-r-contact-row"><span class="ha-r-contact-label">Instagram</span><span class="ha-r-contact-val">${c.instagram||'@qazaqindie'}</span></div>
+  `;
+}
+
+/* ── ARTISTS ── */
+function renderArtists(){
+  document.getElementById('art-cnt').textContent=`— ${D.artists.length} ${t('ac_sfx')}`;
+  document.getElementById('mosaic').innerHTML=D.artists.map((a,i)=>{
+    const isTall=i===1;
+    const pos=a.photo_position||'center 20%';
+    const darkContent=a.photo
+      ?`<img src="${a.photo}" alt="${a[lang].name}" loading="lazy" style="object-position:${pos}">` :'';
+    return `<div class="mc${isTall?' tall':''}" onclick="openArtist('${a.id}')">
+      <div class="mc-top">
+        <div class="mc-num">${String(i+1).padStart(2,'0')}</div>
+        <div class="mc-name">${a[lang].name}</div>
+        <div class="mc-genre">${a[lang].genre}</div>
+      </div>
+      <div class="mc-dark" style="background:${a.color||'#111'}">${darkContent}</div>
+      <span class="mc-arrow">→</span>
+    </div>`;
+  }).join('');
+}
+
+/* ── ARTIST DETAIL ── */
+function openArtist(id){
+  const a=D.artists.find(x=>x.id===id);
+  if(!a) return;
+  const dp=document.getElementById('page-artist-detail');
+  dp.dataset.aid=id;
+  // photo
+  const pw=document.getElementById('d-photo-wrap');
+  if(a.photo){
+    pw.innerHTML=`<img class="d-photo" src="${a.photo}" alt="${a[lang].name}" style="object-position:${a.photo_position||'center top'}">`;
+  } else {
+    pw.innerHTML=`<div class="d-photo-placeholder"><div class="d-photo-initials">${a.initials}</div></div>`;
+  }
+  document.getElementById('d-genre').textContent=a[lang].genre;
+  document.getElementById('d-name').textContent=a[lang].name;
+  document.getElementById('d-bio').textContent=a[lang].bio;
+  document.getElementById('d-meta').innerHTML=
+    `<div class="dm"><div class="dm-v">${a.releases.length}</div><div class="dm-k">${t('la')}</div></div>
+     <div class="dm"><div class="dm-v">${a[lang].country}</div><div class="dm-k">${t('lc')}</div></div>
+     <div class="dm"><div class="dm-v">${a.since}</div><div class="dm-k">${t('ls')}</div></div>`;
+  // links
+  const lkMap={spotify:t('lsp'),apple:t('lap'),youtube:t('lyt'),instagram:t('lig'),bandcamp:t('lbc'),soundcloud:t('lsc')};
+  const lks=Object.entries(lkMap)
+    .filter(([k])=>a.links?.[k])
+    .map(([k,label])=>`<a class="lnk" href="${a.links[k]}" target="_blank">${label}</a>`);
+  document.getElementById('d-links').innerHTML=lks.join('');
+  // discography
+  document.getElementById('d-disc').innerHTML=a.releases.map(r=>{
+    const cover=r.cover
+      ?`<img class="disc-cover" src="${r.cover}" alt="${r[lang]}" loading="lazy">`
+      :`<div class="disc-cover-ph">${r.type.toUpperCase()}</div>`;
+    return `<div class="disc-row">
+      ${cover}
+      <div class="disc-info">
+        <div class="disc-title">${r[lang]}</div>
+        <div class="disc-sub">${r.year}</div>
+      </div>
+      <span class="disc-tp">${r.type.toUpperCase()}</span>
+    </div>`;
+  }).join('');
+  showPage('artist-detail');
+}
+
+/* ── RELEASES ── */
+function renderReleases(){
+  const all=D.artists.flatMap(a=>a.releases.map(r=>({...r,an:a[lang].name,aid:a.id}))).sort((a,b)=>b.year-a.year);
+  document.getElementById('rel-body').innerHTML=all.map(r=>{
+    const coverEl=r.cover
+      ?`<img src="${r.cover}" alt="${r[lang]}" loading="lazy">`
+      :`<div class="rel-card-cover-ph"><div class="rel-card-cover-ph-inner"></div></div>`;
+    return `<div class="rel-card" onclick="openArtist('${r.aid}')">
+      <div class="rel-card-cover">${coverEl}</div>
+      <div class="rel-card-info">
+        <div class="rel-card-year">${r.year}</div>
+        <div class="rel-card-artist">${r.an}</div>
+        <div class="rel-card-title">${r[lang]}</div>
+        <div class="rel-card-bottom">
+          <span class="rel-card-format">${r.type.toUpperCase()} / DIGITAL</span>
+          <span class="rel-card-arrow">→</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+/* ── EVENTS ── */
+function renderEvents(){
+  document.getElementById('ev-list').innerHTML=D.events.map(ev=>{
+    const pill=ev.status==='tickets'
+      ?`<span class="ev-pill ep-on">${t('bti')}</span>`
+      :`<span class="ev-pill ep-few">${t('bfw')}</span>`;
+    const click=ev.link?`onclick="window.open('${ev.link}','_blank')"` :'';
+    return `<div class="ev-row" ${click}>
+      <div class="ev-date"><div class="ev-day">${ev.day}</div><div class="ev-mon">${ev.month[lang]}</div></div>
+      <div><div class="ev-name">${ev[lang].name}</div><div class="ev-venue">${ev[lang].venue}</div></div>
+      ${pill}
+    </div>`;
+  }).join('');
+}
+
+/* ── PRESS ── */
+function renderPress(){
+  const press=D.press||[];
+  if(!press.length){
+    document.getElementById('press-grid').innerHTML='<div style="padding:2rem;color:var(--muted);font-style:italic;font-size:.8rem;grid-column:1/-1">Скоро здесь появятся статьи о лейбле.</div>';
+    return;
+  }
+  document.getElementById('press-grid').innerHTML=press.map(p=>`
+    <a class="press-card" href="${p.url}" target="_blank">
+      <div class="pc-outlet">${p.outlet}</div>
+      <div class="pc-title">${p.title[lang]||p.title.ru||p.title.en}</div>
+      <div class="pc-excerpt">${(p.excerpt&&(p.excerpt[lang]||p.excerpt.ru||p.excerpt.en))||''}</div>
+      <div class="pc-date">${p.date} <span class="pc-arrow">↗</span></div>
+    </a>`).join('');
+}
+
+/* ── ABOUT ── */
+function renderAbout(){
+  const lb=D.label;
+  document.getElementById('about-body').textContent=lb.about[lang];
+  document.getElementById('manifesto').textContent='"'+lb.manifesto[lang]+'"';
+}
+
+/* ── CONTACT ── */
+function renderContact(){
+  const c=D.label.contacts;
+  document.getElementById('ct-grid').innerHTML=`
+    <div class="ct-block"><div class="ct-label">${t('lb')}</div><div class="ct-val">${c.booking}</div><div class="ct-sub">${t('lbs')}</div></div>
+    <div class="ct-block"><div class="ct-label">${t('ld')}</div><div class="ct-val">${c.demos}</div><div class="ct-sub">${t('lds')}</div></div>
+    <div class="ct-block"><div class="ct-label">${t('lp')}</div><div class="ct-val">${c.press}</div><div class="ct-sub">${t('lps')}</div></div>
+    <div class="ct-block"><div class="ct-label">${t('lg')}</div><div class="ct-val">${c.general}</div><div class="ct-sub">${c.city[lang]}</div></div>`;
+}
+
+/* ── FOOTER ── */
+function renderFooter(){
+  const c=D.label.contacts;
+  const links=[];
+  if(c.instagram) links.push(`<a class="f-link" href="${c.instagram}" target="_blank">Instagram</a>`);
+  if(c.soundcloud) links.push(`<a class="f-link" href="${c.soundcloud}" target="_blank">SoundCloud</a>`);
+  if(c.bandcamp) links.push(`<a class="f-link" href="${c.bandcamp}" target="_blank">Bandcamp</a>`);
+  document.getElementById('f-links').innerHTML=links.join('');
+  document.getElementById('f-copy').textContent=t('footer');
+}
+
+function render(){
+  applyUI();
+  renderHome();
+  renderArtists();
+  renderReleases();
+  renderEvents();
+  renderPress();
+  renderAbout();
+  renderContact();
+  renderFooter();
+}
+
+loadData();
+</script>
+</body>
+</html>
