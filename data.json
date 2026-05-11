@@ -1,0 +1,474 @@
+{
+  "label": {
+    "name": "QAZAQ INDIE",
+    "tagline": {
+      "kz": "тәуелсіз лейбл · алматы · 2019-дан",
+      "en": "independent label · almaty · since 2019",
+      "ru": "независимый лейбл · алматы · с 2019"
+    },
+    "hero": {
+      "kz": [
+        "ДАЛАДАН",
+        "ШЫҚҚАН",
+        "ДЫБЫС"
+      ],
+      "en": [
+        "SOUND",
+        "FROM THE",
+        "STEPPE"
+      ],
+      "ru": [
+        "ЗВУК",
+        "ИЗ",
+        "СТЕПИ"
+      ]
+    },
+    "description": {
+      "kz": "Өздерінше дыбысталатындарға арналған инди-лейбл. Қазақстан және одан тыс.",
+      "en": "An indie label for those who sound like themselves. Kazakhstan and beyond.",
+      "ru": "Инди-лейбл для тех, кто звучит по-своему. Казахстан и то, что за ним."
+    },
+    "stats": {
+      "artists": 5,
+      "releases": 18,
+      "founded": 2019
+    },
+    "about": {
+      "kz": "Qazaq Indie Records 2019 жылы Алматыда пайда болды. Бізде жанр жоқ — бізде кеңістік бар. Басқа жерге сыймағандарға арналған. Қазақстан, Орталық Азия, бүкіл әлем — осы ретпен.",
+      "en": "Qazaq Indie Records appeared in Almaty in 2019. We are not a genre label. We are a space for artists who didn't fit anywhere else. Kazakhstan, Central Asia, the whole world — in that order.",
+      "ru": "Qazaq Indie Records появился в Алматы в 2019 году. Мы не жанровый лейбл. Мы — пространство для артистов, которым было тесно в других рамках."
+    },
+    "manifesto": {
+      "kz": "Даладан дүние тыңдамаған дыбыстар шығады. Біздің міндет — кедергі жасамау.",
+      "en": "The steppe holds sounds the world hasn't heard yet. Our job is to get out of the way.",
+      "ru": "У степи есть звуки, которые мир ещё не слышал. Наша задача — не мешать им выйти."
+    },
+    "contacts": {
+      "booking": "booking@qazaqindie.kz",
+      "demos": "demos@qazaqindie.kz",
+      "press": "press@qazaqindie.kz",
+      "general": "info@qazaqindie.kz",
+      "instagram": "https://instagram.com/qazaqindie",
+      "city": {
+        "kz": "Алматы, Қазақстан",
+        "en": "Almaty, Kazakhstan",
+        "ru": "Алматы, Казахстан"
+      },
+      "soundcloud": "",
+      "bandcamp": ""
+    }
+  },
+  "artists": [
+    {
+      "id": "dudeontheguitar",
+      "color": "#1a1a1a",
+      "accent": "#ffffff",
+      "initials": "NE",
+      "photo": "images/dude.jpg",
+      "kz": {
+        "name": "dudeontheguitar",
+        "genre": "Инди-поп / Р&Б",
+        "bio": "Нурбек Елемес — Сарыағаштан шыққан музыкант. Алматы метро өтпелерінен бастаған жолы бүгін ел фестивальдарының ірі сахналарына жетті. Қазақ және ағылшын тілдерін органикалық үйлестіреді.",
+        "country": "Қазақстан"
+      },
+      "en": {
+        "name": "dudeontheguitar",
+        "genre": "Indie Pop / R&B",
+        "bio": "Nurbek Elemes from Saryagash started busking in Almaty underpasses with one acoustic guitar. Now he headlines major Kazakh festivals. His music weaves Kazakh and English into something effortlessly his own.",
+        "country": "Kazakhstan"
+      },
+      "ru": {
+        "name": "dudeontheguitar",
+        "genre": "Инди-поп / Р&Б",
+        "bio": "Нурбек Елемес из Сарыагаша. Начинал петь в подземных переходах и на алматинском Арбате. Сейчас выступает на крупнейших фестивалях страны. Поёт на казахском и английском — органично и без усилий.",
+        "country": "Казахстан"
+      },
+      "since": 2019,
+      "links": {
+        "spotify": "",
+        "instagram": "https://instagram.com/dudeontheguitar",
+        "youtube": "",
+        "apple": "",
+        "bandcamp": "",
+        "soundcloud": ""
+      },
+      "releases": [
+        {
+          "kz": "Дәптер",
+          "en": "Dapter",
+          "ru": "Дәптер",
+          "year": 2023,
+          "type": "album",
+          "cover": ""
+        },
+        {
+          "kz": "kõrpe",
+          "en": "kõrpe",
+          "ru": "kõrpe",
+          "year": 2021,
+          "type": "album",
+          "cover": ""
+        },
+        {
+          "kz": "baq (feat. Jeltoksan.)",
+          "en": "baq (feat. Jeltoksan.)",
+          "ru": "baq (feat. Jeltoksan.)",
+          "year": 2022,
+          "type": "single",
+          "cover": ""
+        },
+        {
+          "kz": "toq (feat. Yenlik)",
+          "en": "toq (feat. Yenlik)",
+          "ru": "toq (feat. Yenlik)",
+          "year": 2022,
+          "type": "single",
+          "cover": ""
+        }
+      ],
+      "photo_position": "center 15%"
+    },
+    {
+      "id": "samrattama",
+      "color": "#0f1a0f",
+      "accent": "#a8d8a8",
+      "initials": "SI",
+      "photo": "images/samrattama.jpeg",
+      "kz": {
+        "name": "SAMRATTAMA",
+        "genre": "Инди / Альтернативті хип-хоп",
+        "bio": "Самрат Иржасов — Қостанайдан шыққан ақын-әнші. Атауы қазақша екі мағынаны береді: «Тама тайпасынан Самрат» және «Самрат болма» — өз жолыңды тап деген шақыру. Қазақ indie-сахнасының негізін қалаушылардың бірі.",
+        "country": "Қазақстан"
+      },
+      "en": {
+        "name": "SAMRATTAMA",
+        "genre": "Indie / Alt Hip-Hop",
+        "bio": "Samrat Irzhasov is a singer-poet from Kostanay. His name has a double meaning in Kazakh: 'Samrat from the Tama tribe' and 'don't be Samrat' — find your own path. One of the founding voices of the Kazakh indie scene, featured in Dazed magazine.",
+        "country": "Kazakhstan"
+      },
+      "ru": {
+        "name": "SAMRATTAMA",
+        "genre": "Инди / Альт хип-хоп",
+        "bio": "Самрат Иржасов — певец-поэт из Костаная. Его имя по-казахски двузначно: «Самрат из рода Тама» и «не будь Самратом» — найди свой путь. Один из основателей казахской инди-сцены, герой материала Dazed.",
+        "country": "Казахстан"
+      },
+      "since": 2017,
+      "links": {
+        "spotify": "",
+        "instagram": "",
+        "youtube": "",
+        "apple": "",
+        "bandcamp": "",
+        "soundcloud": ""
+      },
+      "releases": [
+        {
+          "kz": "ХЭМИНГУЭЙ В ШТАНАХ",
+          "en": "HEMINGWAY IN PANTS",
+          "ru": "ХЭМИНГУЭЙ В ШТАНАХ",
+          "year": 2020,
+          "type": "album",
+          "cover": ""
+        },
+        {
+          "kz": "bitpeitin bit",
+          "en": "bitpeitin bit",
+          "ru": "bitpeitin bit",
+          "year": 2025,
+          "type": "single",
+          "cover": ""
+        },
+        {
+          "kz": "gospozha pensia",
+          "en": "gospozha pensia",
+          "ru": "gospozha pensia",
+          "year": 2025,
+          "type": "single",
+          "cover": ""
+        }
+      ],
+      "photo_position": "center 25%"
+    },
+    {
+      "id": "zere",
+      "color": "#1a0f1a",
+      "accent": "#d4a8d4",
+      "initials": "ZA",
+      "photo": "",
+      "kz": {
+        "name": "Зере Асылбек",
+        "genre": "Альтернативті / Фолк",
+        "bio": "Бішкектен шыққан Зере Асылбек — Орталық Азияның ең батыл дауыстарының бірі. «Қыз» клипі вирусқа айналып, өлім қауіптерін тудырды. Оның музыкасы әйел теңдігі мен қырғыз дәстүрін заманауи дыбыспен ұштастырады.",
+        "country": "Қырғызстан"
+      },
+      "en": {
+        "name": "Zere Asylbek",
+        "genre": "Alternative / Folk",
+        "bio": "Bishkek-born Zere is one of Central Asia's most fearless voices. Her debut video 'Kyz' went viral and drew death threats. Her music blends Kyrgyz tradition with contemporary alternative sound — feminist, urgent, and deeply personal.",
+        "country": "Kyrgyzstan"
+      },
+      "ru": {
+        "name": "Зере Асылбек",
+        "genre": "Альтернатива / Фолк",
+        "bio": "Зере Асылбек из Бишкека — один из самых смелых голосов Центральной Азии. Её дебютный клип «Кыз» вызвал угрозы смерти. Музыка соединяет кыргызскую традицию с современным звуком — феминистская, острая, личная.",
+        "country": "Кыргызстан"
+      },
+      "since": 2018,
+      "links": {
+        "spotify": "https://open.spotify.com/artist/5uxzY7CK473qPFHBaHH0cn",
+        "instagram": "",
+        "youtube": "",
+        "apple": "",
+        "bandcamp": "",
+        "soundcloud": ""
+      },
+      "releases": [
+        {
+          "kz": "MEN KAIDAMYN",
+          "en": "MEN KAIDAMYN",
+          "ru": "MEN KAIDAMYN",
+          "year": 2023,
+          "type": "album",
+          "cover": ""
+        },
+        {
+          "kz": "EKÉK",
+          "en": "EKÉK",
+          "ru": "EKÉK",
+          "year": 2021,
+          "type": "album",
+          "cover": ""
+        },
+        {
+          "kz": "Bashtalos'",
+          "en": "Bashtalos'",
+          "ru": "Bashtalos'",
+          "year": 2018,
+          "type": "album",
+          "cover": ""
+        },
+        {
+          "kz": "Jogolgon Tumar",
+          "en": "Jogolgon Tumar",
+          "ru": "Jogolgon Tumar",
+          "year": 2026,
+          "type": "single",
+          "cover": ""
+        },
+        {
+          "kz": "Anything real",
+          "en": "Anything real",
+          "ru": "Anything real",
+          "year": 2024,
+          "type": "single",
+          "cover": ""
+        }
+      ],
+      "photo_position": "center 20%"
+    },
+    {
+      "id": "balkhashdreaming",
+      "color": "#0a0f1a",
+      "accent": "#a8c4d4",
+      "initials": "БС",
+      "photo": "images/blksh.jpeg",
+      "kz": {
+        "name": "Балхаш снится",
+        "genre": "Поэзия / Пост-панк",
+        "bio": "«Балхаш снится» — Алматының тиімді және эксперименталды дуэті. Тексттер мен дыбыстың серіктестігіне негізделген музыка — жеке, қалалық, постсоветтік. Bandcamp-та белсенді.",
+        "country": "Қазақстан"
+      },
+      "en": {
+        "name": "Балхаш снится",
+        "genre": "Spoken Word / Post-punk",
+        "bio": "Balkhashdreaming is an Almaty duo building music from the partnership of text and sound — intimate, urban, post-Soviet. Their albums feel like field recordings from inside a city that's trying to understand itself.",
+        "country": "Kazakhstan"
+      },
+      "ru": {
+        "name": "Балхаш снится",
+        "genre": "Слово / Пост-панк",
+        "bio": "«Балхаш снится» — алматинский дуэт, строящий музыку на партнёрстве текста и звука. Личное, городское, постсоветское. Второй альбом — инвентаризация взрослеющего человека.",
+        "country": "Казахстан"
+      },
+      "since": 2019,
+      "links": {
+        "spotify": "",
+        "instagram": "https://instagram.com/balkhashdreaming",
+        "youtube": "",
+        "apple": "",
+        "bandcamp": "",
+        "soundcloud": ""
+      },
+      "releases": [
+        {
+          "kz": "ВЗРЫВ",
+          "en": "VZRYV",
+          "ru": "ВЗРЫВ",
+          "year": 2022,
+          "type": "album",
+          "cover": ""
+        },
+        {
+          "kz": "Рухани кенгуру",
+          "en": "Ruhani Kenguru",
+          "ru": "Рухани кенгуру",
+          "year": 2019,
+          "type": "album",
+          "cover": ""
+        }
+      ],
+      "photo_position": "center 20%"
+    },
+    {
+      "id": "molokoetazka",
+      "color": "#1a1500",
+      "accent": "#f0d080",
+      "initials": "МТ",
+      "photo": "images/moloko.jpg",
+      "kz": {
+        "name": "molokoetazka",
+        "genre": "Инди / Электроника",
+        "bio": "molokoetazka — Qazaq Indie лейблінің артисі. Spotify-да белсенді.",
+        "country": "Қазақстан"
+      },
+      "en": {
+        "name": "molokoetazka",
+        "genre": "Indie / Electronic",
+        "bio": "molokoetazka is an artist on the Qazaq Indie roster. Active on Spotify.",
+        "country": "Kazakhstan"
+      },
+      "ru": {
+        "name": "molokoetazka",
+        "genre": "Инди / Электроника",
+        "bio": "molokoetazka — артист лейбла Qazaq Indie. Активен на Spotify.",
+        "country": "Казахстан"
+      },
+      "since": 2020,
+      "links": {
+        "spotify": "",
+        "instagram": "",
+        "youtube": "",
+        "apple": "",
+        "bandcamp": "",
+        "soundcloud": ""
+      },
+      "releases": [],
+      "photo_position": "center 20%"
+    }
+  ],
+  "events": [
+    {
+      "day": 14,
+      "month": {
+        "kz": "МАУ",
+        "en": "JUN",
+        "ru": "ИЮН"
+      },
+      "kz": {
+        "name": "Алматы Шоукейс",
+        "venue": "Tochka Bar, Алматы"
+      },
+      "en": {
+        "name": "Almaty Showcase",
+        "venue": "Tochka Bar, Almaty"
+      },
+      "ru": {
+        "name": "Алматы Шоукейс",
+        "venue": "Tochka Bar, Алматы"
+      },
+      "status": "tickets",
+      "link": ""
+    },
+    {
+      "day": 22,
+      "month": {
+        "kz": "МАУ",
+        "en": "JUN",
+        "ru": "ИЮН"
+      },
+      "kz": {
+        "name": "dudeontheguitar — тікелей",
+        "venue": "ЦДОС, Алматы"
+      },
+      "en": {
+        "name": "dudeontheguitar — Live",
+        "venue": "CDOS, Almaty"
+      },
+      "ru": {
+        "name": "dudeontheguitar — живой концерт",
+        "venue": "ЦДОС, Алматы"
+      },
+      "status": "few",
+      "link": ""
+    },
+    {
+      "day": 5,
+      "month": {
+        "kz": "ШИЛ",
+        "en": "JUL",
+        "ru": "ИЮЛ"
+      },
+      "kz": {
+        "name": "SAMRATTAMA — Barsakelmes",
+        "venue": "ЦеLinny, Алматы"
+      },
+      "en": {
+        "name": "SAMRATTAMA — Barsakelmes",
+        "venue": "Tselliny, Almaty"
+      },
+      "ru": {
+        "name": "SAMRATTAMA — Barsakelmes",
+        "venue": "Цеlinny, Алматы"
+      },
+      "status": "tickets",
+      "link": ""
+    }
+  ],
+  "press": [
+    {
+      "outlet": "Dazed",
+      "url": "https://www.dazeddigital.com",
+      "date": "Oct 2024",
+      "title": {
+        "kz": "SAMRATTAMA: Стептен шыққан дауыс",
+        "en": "SAMRATTAMA: A voice from the steppe",
+        "ru": "SAMRATTAMA: Голос из степи"
+      },
+      "excerpt": {
+        "kz": "Қостанайдан шыққан ақын-музыкант туралы материал.",
+        "en": "A feature on the poet-musician from Kostanay.",
+        "ru": "Материал о поэте-музыканте из Костаная."
+      }
+    },
+    {
+      "outlet": "Harper's Bazaar KZ",
+      "url": "https://harpersbazaar.kz",
+      "date": "Mar 2024",
+      "title": {
+        "kz": "dudeontheguitar: Гитарадағы жігіт",
+        "en": "dudeontheguitar: The dude with a guitar",
+        "ru": "dudeontheguitar: Парень с гитарой"
+      },
+      "excerpt": {
+        "kz": "Нурбек Елемес туралы репортаж.",
+        "en": "A profile of Nurbek Elemes.",
+        "ru": "Репортаж о Нурбеке Елемесе."
+      }
+    },
+    {
+      "outlet": "The Steppe",
+      "url": "https://thesteppe.kz",
+      "date": "Jan 2024",
+      "title": {
+        "kz": "Зере Асылбек: Орталық Азияның батыл дауысы",
+        "en": "Zere Asylbek: Central Asia's fearless voice",
+        "ru": "Зере Асылбек: Бесстрашный голос Центральной Азии"
+      },
+      "excerpt": {
+        "kz": "Зере туралы интервью.",
+        "en": "An interview with Zere.",
+        "ru": "Интервью с Зере."
+      }
+    }
+  ]
+}
